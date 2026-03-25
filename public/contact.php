@@ -9,7 +9,7 @@
 <body>
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="index.php">飞行魔方<small>BEIJING MAGIC FLIGHT TECH</small></a>
+    <a class="brand brand-logo" href="index.php"><img src="assets/customer/logo.png" alt="飞行魔方 Logo"><span>飞行魔方<small>BEIJING MAGIC FLIGHT TECH</small></span></a>
     <nav class="menu">
       <a href="index.php">首页</a>
       <a href="about.php">公司介绍</a>
@@ -39,11 +39,15 @@
       <p><strong>公司名称：</strong>北京飞行魔方科技有限公司</p>
       <p><strong>核心业务：</strong>物流无人机、应急消防、编队表演、载人飞行器、低空管理平台</p>
       <p><strong>当前状态：</strong>已完成基于现有文档素材的首轮官网内容替换</p>
-      <p><strong>待补充信息：</strong>联系电话、邮箱、办公地址、微信二维码、地图定位</p>
+      <p><strong>联系信息：</strong>当前素材未包含明确的联系电话、邮箱和办公地址，页面已先保留为资料收口版本，避免展示错误信息。</p>
       <p><strong>合作方向：</strong>无人机采购、行业解决方案、项目合作、演艺活动、技术交流</p>
     </div>
     <div class="dark-panel">
       <h2>服务内容</h2>
+      <div class="media-grid" style="margin-top:0;margin-bottom:24px;">
+        <div class="media-card"><img src="assets/customer/logistics-50.png" alt="物流无人机产品图"><p>物流无人机产品图</p></div>
+        <div class="media-card"><img src="assets/customer/show-line2.png" alt="室内编队方案图"><p>室内编队方案图</p></div>
+      </div>
       <ul class="feature-list">
         <li>物流无人机选型与运输解决方案设计</li>
         <li>应急消防投弹无人机方案支持</li>

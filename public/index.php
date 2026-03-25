@@ -14,7 +14,7 @@ $featured = array_slice($products, 0, 8, true);
 <body>
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="index.php">飞行魔方<small>BEIJING MAGIC FLIGHT TECH</small></a>
+    <a class="brand brand-logo" href="index.php"><img src="assets/customer/logo.png" alt="飞行魔方 Logo"><span>飞行魔方<small>BEIJING MAGIC FLIGHT TECH</small></span></a>
     <nav class="menu">
       <a href="about.php">公司介绍</a>
       <a href="products.php">产品中心</a>
@@ -166,7 +166,7 @@ $featured = array_slice($products, 0, 8, true);
     <div class="section-header centered">
       <span class="eyebrow">Media Gallery</span>
       <h2>影像中心</h2>
-      <p>已替换为你提供的真实产品素材，包括消防、编队、物流与载人飞行器图像。</p>
+      <p>已替换为你提供的真实产品素材，包括消防、编队、物流与载人飞行器图像，并加入视频展示入口。</p>
     </div>
     <div class="gallery gallery-masonry">
       <img src="assets/customer/fire-photo.jpg" alt="应急消防无人机">
@@ -177,6 +177,22 @@ $featured = array_slice($products, 0, 8, true);
       <img src="assets/customer/manned-f.png" alt="载人飞行器素材 1">
       <img src="assets/customer/logistics-150-2.png" alt="150 公斤物流无人机设计图">
       <img src="assets/customer/manned-l.png" alt="载人飞行器素材 2">
+    </div>
+    <div class="media-grid">
+      <div class="media-card">
+        <video controls preload="metadata">
+          <source src="assets/customer/logistics-150.mp4" type="video/mp4">
+          您的浏览器暂不支持视频播放。
+        </video>
+        <p>FC-TS150 150 公斤物流无人机视频资料</p>
+      </div>
+      <div class="media-card">
+        <video controls preload="metadata">
+          <source src="assets/customer/manned.mp4" type="video/mp4">
+          您的浏览器暂不支持视频播放。
+        </video>
+        <p>蛋壳飞行器视频资料</p>
+      </div>
     </div>
   </div>
 </section>
@@ -216,7 +232,7 @@ $featured = array_slice($products, 0, 8, true);
       <p><strong>公司名称：</strong>北京飞行魔方科技有限公司</p>
       <p><strong>主营方向：</strong>物流无人机、应急消防、编队表演、载人飞行器、低空飞行综合管理服务平台</p>
       <p><strong>公司介绍资料：</strong>已根据提供文档完成首轮内容替换</p>
-      <p><strong>备注：</strong>若你提供真实电话、邮箱、地址，我可以继续替换到正式对外版本</p>
+      <p><strong>备注：</strong>当前页面已基于现有素材完成内容替换；如后续补充电话、邮箱、地址，可继续完善为正式对外版本。</p>
     </div>
     <div class="contact-card">
       <h3>快速导航</h3>

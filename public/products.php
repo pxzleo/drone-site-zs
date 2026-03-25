@@ -10,7 +10,7 @@
 <body>
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="index.php">飞行魔方<small>BEIJING MAGIC FLIGHT TECH</small></a>
+    <a class="brand brand-logo" href="index.php"><img src="assets/customer/logo.png" alt="飞行魔方 Logo"><span>飞行魔方<small>BEIJING MAGIC FLIGHT TECH</small></span></a>
     <nav class="menu">
       <a href="index.php">首页</a>
       <a href="about.php">公司介绍</a>

@@ -5,6 +5,8 @@ $product = $products[$slug] ?? null;
 if (!$product) {
     http_response_code(404);
 }
+$gallery = $product['gallery'] ?? ($product ? [$product['image']] : []);
+$video = $product['video'] ?? null;
 ?>
 <!doctype html>
 <html lang="zh-CN">
@@ -17,7 +19,7 @@ if (!$product) {
 <body>
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="index.php">飞行魔方<small>BEIJING MAGIC FLIGHT TECH</small></a>
+    <a class="brand brand-logo" href="index.php"><img src="assets/customer/logo.png" alt="飞行魔方 Logo"><span>飞行魔方<small>BEIJING MAGIC FLIGHT TECH</small></span></a>
     <nav class="menu">
       <a href="index.php">首页</a>
       <a href="about.php">公司介绍</a>
@@ -97,7 +99,7 @@ if (!$product) {
 
 <section class="section">
   <div class="container showcase">
-    <div class="photo"><img src="assets/images/gallery/gallery-2.webp" alt="<?= htmlspecialchars($product['name']) ?> 场景图"></div>
+    <div class="photo"><img src="<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['name']) ?> 场景图"></div>
     <div class="dark-panel">
       <h2>方案说明</h2>
       <p><?= htmlspecialchars($product['name']) ?> 可根据项目预算、场景复杂度和任务频率形成标准版、增强版或定制版配置。对于行业客户，我们还可配套地面站、培训方案、巡检流程或运输作业方案，帮助形成完整交付。</p>
@@ -106,6 +108,33 @@ if (!$product) {
         <div class="timeline-item"><strong>行业增强</strong><br>增加任务挂载、数据接口与更适合复杂场景的系统配置。</div>
         <div class="timeline-item"><strong>深度定制</strong><br>针对大型行业客户，支持软硬件联合定制与系统级联动。</div>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="eyebrow">Product Media</span>
+      <h2>图像与媒体资料</h2>
+      <p>基于现有素材，为该产品匹配了更接近的图片；若有视频文件，也会直接嵌入展示。</p>
+    </div>
+    <div class="media-grid">
+      <?php foreach ($gallery as $mediaImage): ?>
+        <div class="media-card">
+          <img src="<?= htmlspecialchars($mediaImage) ?>" alt="<?= htmlspecialchars($product['name']) ?> 图像资料">
+          <p><?= htmlspecialchars($product['name']) ?> 相关图像资料</p>
+        </div>
+      <?php endforeach; ?>
+      <?php if ($video): ?>
+        <div class="media-card" style="grid-column:1 / -1;">
+          <video controls preload="metadata">
+            <source src="<?= htmlspecialchars($video) ?>" type="video/mp4">
+            您的浏览器暂不支持视频播放。
+          </video>
+          <p><?= htmlspecialchars($product['name']) ?> 相关视频资料</p>
+        </div>
+      <?php endif; ?>
     </div>
   </div>
 </section>

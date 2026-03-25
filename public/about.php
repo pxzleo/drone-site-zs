@@ -9,7 +9,7 @@
 <body>
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="index.php">飞行魔方<small>BEIJING MAGIC FLIGHT TECH</small></a>
+    <a class="brand brand-logo" href="index.php"><img src="assets/customer/logo.png" alt="飞行魔方 Logo"><span>飞行魔方<small>BEIJING MAGIC FLIGHT TECH</small></span></a>
     <nav class="menu">
       <a href="index.php">首页</a>
       <a href="about.php">公司介绍</a>
@@ -57,6 +57,10 @@
       <span class="eyebrow">Capabilities & Qualifications</span>
       <h2>能力与资质</h2>
       <p>根据资料整理出的公司能力重点与代表性履历。</p>
+    </div>
+    <div class="media-grid" style="margin-bottom:28px;">
+      <div class="media-card"><img src="assets/customer/manned-p.png" alt="飞行魔方载人飞行器细节图"><p>载人飞行器细节图</p></div>
+      <div class="media-card"><img src="assets/customer/manned-t.png" alt="飞行魔方载人飞行器展示图"><p>载人飞行器展示图</p></div>
     </div>
     <div class="timeline">
       <div class="timeline-item"><strong>自主研发能力</strong><br>覆盖飞控、机体、AI、云平台和多机型整机设计，具备研产一体能力。</div>
