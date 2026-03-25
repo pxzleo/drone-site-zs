@@ -37,9 +37,12 @@
     <div class="contact-card emphasis">
       <h2>商务联系</h2>
       <p><strong>公司名称：</strong>北京飞行魔方科技有限公司</p>
+      <p><strong>联系人：</strong>潘先生</p>
+      <p><strong>联系电话：</strong>13671086911</p>
+      <p><strong>联系邮箱：</strong>pxzleo@126.com</p>
+      <p><strong>公司地址：</strong>北京市昌平区史各庄街道生命科学园路北清创意园4-1楼</p>
+      <p><strong>官网域名：</strong>flicube.com</p>
       <p><strong>核心业务：</strong>物流无人机、应急消防、编队表演、载人飞行器、低空管理平台</p>
-      <p><strong>当前状态：</strong>已完成基于现有文档素材的首轮官网内容替换</p>
-      <p><strong>联系信息：</strong>当前素材未包含明确的联系电话、邮箱和办公地址，页面已先保留为资料收口版本，避免展示错误信息。</p>
       <p><strong>合作方向：</strong>无人机采购、行业解决方案、项目合作、演艺活动、技术交流</p>
     </div>
     <div class="dark-panel">
@@ -58,7 +61,7 @@
       <div class="timeline" style="margin-top:28px">
         <div class="timeline-item"><strong>资料沟通</strong><br>确认行业场景、任务目标和产品方向。</div>
         <div class="timeline-item"><strong>方案整理</strong><br>输出机型建议、参数重点和实施思路。</div>
-        <div class="timeline-item"><strong>持续补全</strong><br>待你提供真实联系信息后，可继续完善成正式对外页面。</div>
+        <div class="timeline-item"><strong>正式联系</strong><br>可通过电话、邮箱或官网域名进一步沟通合作方案与产品资料。</div>
       </div>
     </div>
   </div>
@@ -67,7 +70,7 @@
 <footer class="footer">
   <div class="container footer-bottom">
     <div>© <?php echo date('Y'); ?> 北京飞行魔方科技有限公司</div>
-    <div>联系我们页面</div>
+    <div>联系我们页面 · flicube.com</div>
   </div>
 </footer>
 </body>

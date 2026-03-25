@@ -74,7 +74,7 @@
 <footer class="footer">
   <div class="container footer-bottom">
     <div>© <?php echo date('Y'); ?> 北京飞行魔方科技有限公司</div>
-    <div>公司介绍页</div>
+    <div>公司介绍页 · flicube.com</div>
   </div>
 </footer>
 </body>
