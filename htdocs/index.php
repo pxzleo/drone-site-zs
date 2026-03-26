@@ -244,8 +244,6 @@ $featured = array_slice($products, 0, 8, true);
       <h2>联系我们</h2>
       <p>欢迎联系北京飞行魔方科技有限公司，获取产品资料、行业方案、合作支持与部署建议。</p>
       <p><strong>公司名称：</strong>北京飞行魔方科技有限公司</p>
-      <p><strong>联系人：</strong>潘先生</p>
-      <p><strong>联系电话：</strong>13671086911</p>
       <p><strong>联系邮箱：</strong>pxzleo@126.com</p>
       <p><strong>公司地址：</strong>北京市昌平区史各庄街道生命科学园路北清创意园4-1楼</p>
       <p><strong>主营方向：</strong>物流无人机、应急消防、编队表演、载人飞行器、低空飞行综合管理服务平台</p>

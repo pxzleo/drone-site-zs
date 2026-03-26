@@ -129,7 +129,7 @@ $productLinks = [
     <h2>想进一步了解“<?= htmlspecialchars($case['title']) ?>”对应产品和实施方式？</h2>
     <p>欢迎联系北京飞行魔方科技有限公司，获取资料、参数说明与项目建议。</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="contact.php">联系潘先生</a>
+      <a class="btn btn-primary" href="contact.php">联系咨询</a>
       <a class="btn btn-secondary" href="products.php">查看产品中心</a>
     </div>
   </div>
