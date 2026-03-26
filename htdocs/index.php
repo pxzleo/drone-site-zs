@@ -109,7 +109,7 @@ $featured = array_slice($products, 0, 8, true);
       <?php foreach ($featured as $slug => $product): ?>
       <article class="card product-card product-card-large">
         <div class="product-image-wrap">
-          <img src="<?= htmlspecialchars($product['card_image'] ?? $product['image']) ?>" alt="<?= htmlspecialchars($product['name']) ?>">
+          <img src="<?= htmlspecialchars((isset($product['card_image']) ? $product['card_image'] : $product['image'])) ?>" alt="<?= htmlspecialchars($product['name']) ?>">
         </div>
         <div class="card-body">
           <div class="product-meta">

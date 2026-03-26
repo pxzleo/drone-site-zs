@@ -1,8 +1,8 @@
 <?php
 $cases = require __DIR__ . '/../myfolder/cases.php';
 $products = require __DIR__ . '/../myfolder/products.php';
-$slug = $_GET['slug'] ?? '';
-$case = $cases[$slug] ?? null;
+$slug = isset($_GET['slug']) ? $_GET['slug'] : '';
+$case = isset($cases[$slug]) ? $cases[$slug] : null;
 if (!$case) {
     http_response_code(404);
 }

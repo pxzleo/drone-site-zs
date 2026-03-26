@@ -1,13 +1,13 @@
 <?php
 $products = require __DIR__ . '/../myfolder/products.php';
 $cases = require __DIR__ . '/../myfolder/cases.php';
-$slug = $_GET['slug'] ?? '';
-$product = $products[$slug] ?? null;
+$slug = isset($_GET['slug']) ? $_GET['slug'] : '';
+$product = isset($products[$slug]) ? $products[$slug] : null;
 if (!$product) {
     http_response_code(404);
 }
-$gallery = $product['gallery'] ?? ($product ? [$product['image']] : []);
-$video = $product['video'] ?? null;
+$gallery = isset($product['gallery']) ? $product['gallery'] : ($product ? array($product['image']) : array());
+$video = isset($product['video']) ? $product['video'] : null;
 $productToCases = [
     'fc-130' => ['low-altitude-logistics'],
     'fc-0510' => ['low-altitude-logistics'],
@@ -21,7 +21,7 @@ $productToCases = [
     'eggcraft' => ['manned-experience'],
     'uav-platform' => ['low-altitude-platform']
 ];
-$relatedCases = $productToCases[$slug] ?? [];
+$relatedCases = isset($productToCases[$slug]) ? $productToCases[$slug] : array();
 ?>
 <!doctype html>
 <html lang="zh-CN">
