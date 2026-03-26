@@ -190,7 +190,7 @@ $featured = array_slice($products, 0, 8, true);
         <div class="media-caption"><strong>应急消防</strong><span>FC-F150pro 大载重消防投弹无人机场景图</span></div>
       </div>
       <div class="media-feature media-logistics photo-toned">
-        <img src="assets/customer/homepage/home-logistics.jpg" alt="物流无人机">
+        <img src="assets/customer/logistics-150-2.png" alt="物流无人机">
         <div class="media-caption"><strong>物流运输</strong><span>150 公斤级物流无人机平台展示</span></div>
       </div>
       <div class="media-feature media-show photo-toned">
