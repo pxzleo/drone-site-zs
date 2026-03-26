@@ -1,5 +1,6 @@
 <?php
 $products = require __DIR__ . '/../data/products.php';
+$cases = require __DIR__ . '/../data/cases.php';
 $slug = $_GET['slug'] ?? '';
 $product = $products[$slug] ?? null;
 if (!$product) {
@@ -7,6 +8,20 @@ if (!$product) {
 }
 $gallery = $product['gallery'] ?? ($product ? [$product['image']] : []);
 $video = $product['video'] ?? null;
+$productToCases = [
+    'fc-130' => ['low-altitude-logistics'],
+    'fc-0510' => ['low-altitude-logistics'],
+    'tf70' => ['heavy-industrial-transport'],
+    'fc-5100n' => ['heavy-industrial-transport'],
+    'fc-ts150' => ['low-altitude-logistics', 'heavy-industrial-transport'],
+    'fc-ts300' => ['low-altitude-logistics', 'heavy-industrial-transport'],
+    'fc-f150pro' => ['emergency-firefighting'],
+    'xh-v21' => ['cultural-drone-show', 'indoor-outdoor-show'],
+    'indoor-show' => ['cultural-drone-show', 'indoor-outdoor-show', 'indoor-pattern-design'],
+    'eggcraft' => ['manned-experience'],
+    'uav-platform' => ['low-altitude-platform']
+];
+$relatedCases = $productToCases[$slug] ?? [];
 ?>
 <!doctype html>
 <html lang="zh-CN">
@@ -138,6 +153,29 @@ $video = $product['video'] ?? null;
     </div>
   </div>
 </section>
+
+<?php if ($relatedCases): ?>
+<section class="section dark-section">
+  <div class="container">
+    <div class="section-header centered">
+      <span class="eyebrow">Related Cases</span>
+      <h2>相关案例</h2>
+      <p>该产品可进一步对应到以下应用案例页面。</p>
+    </div>
+    <div class="grid grid-3">
+      <?php foreach ($relatedCases as $caseSlug): ?>
+        <?php if (isset($cases[$caseSlug])): ?>
+          <div class="dark-panel tall-panel">
+            <h3><?= htmlspecialchars($cases[$caseSlug]['title']) ?></h3>
+            <p><?= htmlspecialchars($cases[$caseSlug]['summary']) ?></p>
+            <a class="btn btn-secondary" href="case.php?slug=<?= urlencode($caseSlug) ?>">查看案例详情</a>
+          </div>
+        <?php endif; ?>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
 
 <section class="section">
   <div class="container cta-banner">

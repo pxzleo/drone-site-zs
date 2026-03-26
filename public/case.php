@@ -1,10 +1,24 @@
 <?php
 $cases = require __DIR__ . '/../data/cases.php';
+$products = require __DIR__ . '/../data/products.php';
 $slug = $_GET['slug'] ?? '';
 $case = $cases[$slug] ?? null;
 if (!$case) {
     http_response_code(404);
 }
+$productLinks = [
+    'FC-130 小型物流无人机' => 'fc-130',
+    'FC-0510 智能物流无人机' => 'fc-0510',
+    'TF70 运输无人机' => 'tf70',
+    'FC-5100N 100 公斤运输无人机' => 'fc-5100n',
+    'FC-TS150 150 公斤物流无人机' => 'fc-ts150',
+    'FC-TS300 300 公斤物流无人机' => 'fc-ts300',
+    'FC-F150pro 大载重消防投弹无人机飞行平台' => 'fc-f150pro',
+    '星幻编队无人机 V2.1' => 'xh-v21',
+    '室内编队无人机' => 'indoor-show',
+    '蛋壳飞行器' => 'eggcraft',
+    '低空飞行综合管理服务平台' => 'uav-platform'
+];
 ?>
 <!doctype html>
 <html lang="zh-CN">
@@ -61,7 +75,7 @@ if (!$case) {
 <section class="section">
   <div class="container grid grid-2">
     <div class="dark-panel">
-      <h2>场景痛点</h2>
+      <h2>资料中的场景背景</h2>
       <ul class="feature-list">
         <?php foreach ($case['pain_points'] as $item): ?>
           <li><?= htmlspecialchars($item) ?></li>
@@ -69,7 +83,7 @@ if (!$case) {
       </ul>
     </div>
     <div class="dark-panel">
-      <h2>解决方案</h2>
+      <h2>资料中的方案描述</h2>
       <p><?= htmlspecialchars($case['solution']) ?></p>
     </div>
   </div>
@@ -78,15 +92,21 @@ if (!$case) {
 <section class="section dark-section">
   <div class="container grid grid-3">
     <div class="dark-panel tall-panel">
-      <h3>适配产品</h3>
+      <h3>对应产品</h3>
       <ul class="feature-list compact">
         <?php foreach ($case['products'] as $item): ?>
-          <li><?= htmlspecialchars($item) ?></li>
+          <li>
+            <?php if (isset($productLinks[$item])): ?>
+              <a href="product.php?slug=<?= urlencode($productLinks[$item]) ?>"><?= htmlspecialchars($item) ?></a>
+            <?php else: ?>
+              <?= htmlspecialchars($item) ?>
+            <?php endif; ?>
+          </li>
         <?php endforeach; ?>
       </ul>
     </div>
     <div class="dark-panel tall-panel">
-      <h3>实施流程</h3>
+      <h3>资料中的实施流程</h3>
       <ul class="feature-list compact">
         <?php foreach ($case['process'] as $item): ?>
           <li><?= htmlspecialchars($item) ?></li>
@@ -94,7 +114,7 @@ if (!$case) {
       </ul>
     </div>
     <div class="dark-panel tall-panel">
-      <h3>交付内容</h3>
+      <h3>交付与系统能力</h3>
       <ul class="feature-list compact">
         <?php foreach ($case['deliverables'] as $item): ?>
           <li><?= htmlspecialchars($item) ?></li>
@@ -106,8 +126,8 @@ if (!$case) {
 
 <section class="section">
   <div class="container cta-banner">
-    <h2>想进一步了解“<?= htmlspecialchars($case['title']) ?>”的具体配置与实施方式？</h2>
-    <p>欢迎联系北京飞行魔方科技有限公司，获取详细资料、产品推荐与项目建议。</p>
+    <h2>想进一步了解“<?= htmlspecialchars($case['title']) ?>”对应产品和实施方式？</h2>
+    <p>欢迎联系北京飞行魔方科技有限公司，获取资料、参数说明与项目建议。</p>
     <div class="hero-actions">
       <a class="btn btn-primary" href="contact.php">联系潘先生</a>
       <a class="btn btn-secondary" href="products.php">查看产品中心</a>
@@ -119,7 +139,7 @@ if (!$case) {
 <footer class="footer">
   <div class="container footer-bottom">
     <div>© <?php echo date('Y'); ?> 北京飞行魔方科技有限公司</div>
-    <div>案例详情页 · flicube.com</div>
+    <div>案例详情页</div>
   </div>
 </footer>
 </body>
