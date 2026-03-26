@@ -27,7 +27,7 @@ $featured = array_slice($products, 0, 8, true);
 </header>
 
 <section class="hero hero-tall">
-  <img class="hero-bg" src="assets/customer/fire-hero.png" alt="飞行魔方无人机主视觉">
+  <img class="hero-bg" src="assets/customer/homepage/home-hero.jpg" alt="飞行魔方无人机主视觉">
   <div class="container hero-content hero-single">
     <div class="hero-copy">
       <span class="eyebrow">Low-Altitude Economy · Logistics / Firefighting / Drone Show / eVTOL</span>
@@ -43,6 +43,20 @@ $featured = array_slice($products, 0, 8, true);
 
 <section class="section section-tight hero-stats-wrap">
   <div class="container">
+    <div class="hero-intro-panel">
+      <div class="hero-intro-copy">
+        <strong>核心方向</strong>
+        <span>物流运输 / 应急消防 / 编队演艺 / 载人体验 / 低空管理平台</span>
+      </div>
+      <div class="hero-intro-copy">
+        <strong>研发能力</strong>
+        <span>飞控、机体、AI、云平台一体化协同研发</span>
+      </div>
+      <div class="hero-intro-copy">
+        <strong>服务模式</strong>
+        <span>产品交付、任务实施、平台支持与长期运维</span>
+      </div>
+    </div>
     <div class="hero-stats-grid">
       <div class="metric"><div><strong>2016</strong><span>公司成立时间</span></div></div>
       <div class="metric"><div><strong>5kg-300kg</strong><span>物流无人机载重覆盖</span></div></div>
@@ -80,7 +94,7 @@ $featured = array_slice($products, 0, 8, true);
         </div>
       </div>
     </div>
-    <div class="photo dramatic photo-toned"><img src="assets/customer/logistics-150-2.png" alt="飞行魔方物流无人机"></div>
+    <div class="photo dramatic photo-toned"><img src="assets/customer/homepage/home-about.jpg" alt="飞行魔方物流无人机"></div>
   </div>
 </section>
 
@@ -147,7 +161,7 @@ $featured = array_slice($products, 0, 8, true);
 
 <section class="section image-story">
   <div class="container showcase">
-    <div class="photo cinematic photo-toned"><img src="assets/customer/show-a3.png" alt="飞行魔方编队表演"></div>
+    <div class="photo cinematic photo-toned"><img src="assets/customer/homepage/home-story.jpg" alt="飞行魔方编队表演"></div>
     <div class="dark-panel story-panel">
       <span class="eyebrow">How We Deliver</span>
       <h2>从整机研发，到场景交付，再到持续运营支持</h2>
@@ -170,19 +184,19 @@ $featured = array_slice($products, 0, 8, true);
     </div>
     <div class="home-media-grid">
       <div class="media-feature media-fire photo-toned">
-        <img src="assets/customer/fire-photo.jpg" alt="应急消防无人机">
+        <img src="assets/customer/homepage/home-fire.jpg" alt="应急消防无人机">
         <div class="media-caption"><strong>应急消防</strong><span>FC-F150pro 大载重消防投弹无人机场景图</span></div>
       </div>
       <div class="media-feature media-logistics photo-toned">
-        <img src="assets/customer/logistics-150-1.png" alt="物流无人机">
+        <img src="assets/customer/homepage/home-logistics.jpg" alt="物流无人机">
         <div class="media-caption"><strong>物流运输</strong><span>150 公斤级物流无人机平台展示</span></div>
       </div>
       <div class="media-feature media-show photo-toned">
-        <img src="assets/customer/show-a7.png" alt="编队表演无人机">
+        <img src="assets/customer/homepage/home-show.jpg" alt="编队表演无人机">
         <div class="media-caption"><strong>编队演艺</strong><span>星幻编队无人机外场表演素材</span></div>
       </div>
       <div class="media-feature media-manned photo-toned">
-        <img src="assets/customer/manned-f.png" alt="载人飞行器">
+        <img src="assets/customer/homepage/home-manned.jpg" alt="载人飞行器">
         <div class="media-caption"><strong>载人体验</strong><span>蛋壳飞行器展示素材</span></div>
       </div>
     </div>
@@ -242,7 +256,6 @@ $featured = array_slice($products, 0, 8, true);
       <p><strong>联系电话：</strong>13671086911</p>
       <p><strong>联系邮箱：</strong>pxzleo@126.com</p>
       <p><strong>公司地址：</strong>北京市昌平区史各庄街道生命科学园路北清创意园4-1楼</p>
-      <p><strong>官网域名：</strong>flicube.com</p>
       <p><strong>主营方向：</strong>物流无人机、应急消防、编队表演、载人飞行器、低空飞行综合管理服务平台</p>
     </div>
     <div class="contact-card">
