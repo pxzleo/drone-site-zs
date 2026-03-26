@@ -80,7 +80,7 @@ $featured = array_slice($products, 0, 8, true);
         </div>
       </div>
     </div>
-    <div class="photo dramatic"><img src="assets/customer/manned-hero.png" alt="飞行魔方载人飞行器"></div>
+    <div class="photo dramatic photo-toned"><img src="assets/customer/logistics-150-2.png" alt="飞行魔方物流无人机"></div>
   </div>
 </section>
 
@@ -147,7 +147,7 @@ $featured = array_slice($products, 0, 8, true);
 
 <section class="section image-story">
   <div class="container showcase">
-    <div class="photo cinematic"><img src="assets/customer/show-a3.png" alt="飞行魔方编队表演"></div>
+    <div class="photo cinematic photo-toned"><img src="assets/customer/show-a3.png" alt="飞行魔方编队表演"></div>
     <div class="dark-panel story-panel">
       <span class="eyebrow">How We Deliver</span>
       <h2>从整机研发，到场景交付，再到持续运营支持</h2>
@@ -163,22 +163,30 @@ $featured = array_slice($products, 0, 8, true);
 
 <section class="section dark-section" id="gallery">
   <div class="container">
-    <div class="section-header centered">
+    <div class="section-header centered compact-header">
       <span class="eyebrow">Media Gallery</span>
-      <h2>影像中心</h2>
-      <p>已替换为你提供的真实产品素材，包括消防、编队、物流与载人飞行器图像，并加入视频展示入口。</p>
+      <h2>核心影像</h2>
+      <p>首页只保留消防、物流、编队、载人四类核心画面，减少拼贴感，强化整体视觉一致性。</p>
     </div>
-    <div class="gallery gallery-masonry">
-      <img src="assets/customer/fire-photo.jpg" alt="应急消防无人机">
-      <img src="assets/customer/show-a7.png" alt="编队表演无人机">
-      <img src="assets/customer/logistics-150-1.png" alt="150 公斤物流无人机">
-      <img src="assets/customer/logistics-100.png" alt="100 公斤运输无人机">
-      <img src="assets/customer/show-a8.png" alt="编队无人机灯光效果">
-      <img src="assets/customer/manned-f.png" alt="载人飞行器素材 1">
-      <img src="assets/customer/logistics-150-2.png" alt="150 公斤物流无人机设计图">
-      <img src="assets/customer/manned-l.png" alt="载人飞行器素材 2">
+    <div class="home-media-grid">
+      <div class="media-feature media-fire photo-toned">
+        <img src="assets/customer/fire-photo.jpg" alt="应急消防无人机">
+        <div class="media-caption"><strong>应急消防</strong><span>FC-F150pro 大载重消防投弹无人机场景图</span></div>
+      </div>
+      <div class="media-feature media-logistics photo-toned">
+        <img src="assets/customer/logistics-150-1.png" alt="物流无人机">
+        <div class="media-caption"><strong>物流运输</strong><span>150 公斤级物流无人机平台展示</span></div>
+      </div>
+      <div class="media-feature media-show photo-toned">
+        <img src="assets/customer/show-a7.png" alt="编队表演无人机">
+        <div class="media-caption"><strong>编队演艺</strong><span>星幻编队无人机外场表演素材</span></div>
+      </div>
+      <div class="media-feature media-manned photo-toned">
+        <img src="assets/customer/manned-f.png" alt="载人飞行器">
+        <div class="media-caption"><strong>载人体验</strong><span>蛋壳飞行器展示素材</span></div>
+      </div>
     </div>
-    <div class="media-grid">
+    <div class="media-grid media-grid-videos">
       <div class="media-card">
         <video controls preload="metadata">
           <source src="assets/customer/logistics-150.mp4" type="video/mp4">
