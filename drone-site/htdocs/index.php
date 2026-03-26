@@ -236,17 +236,7 @@ $featured = array_slice($products, 0, 8, true);
   </div>
 </section>
 
-<section class="section section-tight">
-  <div class="container cta-banner giant-cta">
-    <span class="eyebrow">欢迎进一步沟通</span>
-    <h2>获取产品资料、项目方案与定制化低空解决方案</h2>
-    <p>如果你还要，我可以继续把 PDF / DOCX 里的更多参数表、视频展示区和下载入口做进正式页面。</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="contact.php">联系我们</a>
-      <a class="btn btn-secondary" href="products.php">查看全部产品</a>
-    </div>
-  </div>
-</section>
+
 
 <section class="section" id="contact">
   <div class="container footer-grid">
@@ -278,14 +268,6 @@ $featured = array_slice($products, 0, 8, true);
 </section>
 
 
-<section class="section section-tight">
-  <div class="container">
-    <div class="dark-panel">
-      <h3>内容说明</h3>
-      <p>本网站所载产品参数、图片、案例及相关介绍主要依据现有资料整理，仅供沟通参考，不构成性能承诺或正式交付标准。具体配置、功能、适用场景、服务内容及合作方式，请以双方正式沟通、测试结果及合同约定为准。</p>
-    </div>
-  </div>
-</section>
 
 <footer class="footer">
   <div class="container footer-bottom">

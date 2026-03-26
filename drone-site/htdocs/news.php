@@ -50,14 +50,6 @@
 </section>
 
 
-<section class="section section-tight">
-  <div class="container">
-    <div class="dark-panel">
-      <h3>内容说明</h3>
-      <p>本网站所载产品参数、图片、案例及相关介绍主要依据现有资料整理，仅供沟通参考，不构成性能承诺或正式交付标准。具体配置、功能、适用场景、服务内容及合作方式，请以双方正式沟通、测试结果及合同约定为准。</p>
-    </div>
-  </div>
-</section>
 
 <footer class="footer"><div class="container footer-bottom"><div>© <?php echo date('Y'); ?> 北京飞行魔方科技有限公司</div><div>新闻资讯页</div></div></footer>
 </body>
