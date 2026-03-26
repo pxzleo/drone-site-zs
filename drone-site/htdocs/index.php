@@ -15,6 +15,7 @@ $featured = array_slice($products, 0, 8, true);
 <header class="site-header">
   <div class="container nav">
     <a class="brand brand-logo" href="index.php"><img src="assets/customer/logo.png" alt="飞行魔方 Logo"></a>
+    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="打开导航菜单">☰</button>
     <nav class="menu">
       <a href="about.php">公司介绍</a>
       <a href="products.php">产品中心</a>
@@ -24,7 +25,7 @@ $featured = array_slice($products, 0, 8, true);
       <a href="contact.php" class="cta">联系我们</a>
     </nav>
   </div>
-  <div class="container mobile-nav-wrap">
+  <div class="container mobile-nav-wrap" id="mobile-menu-panel">
     <nav class="mobile-menu">
       <a href="about.php">公司介绍</a>
       <a href="products.php">产品中心</a>
@@ -285,5 +286,17 @@ $featured = array_slice($products, 0, 8, true);
     备案号：京ICP备17001976号-2
   </div>
 </footer>
+<script>
+(function(){
+  var btn=document.querySelector('.mobile-menu-toggle');
+  var panel=document.getElementById('mobile-menu-panel');
+  if(!btn||!panel) return;
+  btn.addEventListener('click',function(){
+    var open=panel.classList.toggle('open');
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+    btn.textContent=open ? '✕' : '☰';
+  });
+})();
+</script>
 </body>
 </html>
