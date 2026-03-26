@@ -25,7 +25,7 @@
   <div class="container">
     <div class="breadcrumb"><a href="index.php">首页</a> / 公司介绍</div>
     <div class="section-header">
-      <span class="eyebrow">About Magic Flight</span>
+      <span class="eyebrow">公司介绍</span>
       <h1>北京飞行魔方科技：以自主研发为核心的低空经济产品企业</h1>
       <p>北京飞行魔方科技成立于 2016 年，团队由清华、北航技术骨干及前亿航高管组成，具备飞控、机体、整机量产与系统平台的一体化研发能力。</p>
     </div>
@@ -54,7 +54,7 @@
 <section class="section">
   <div class="container">
     <div class="section-header centered">
-      <span class="eyebrow">Capabilities & Qualifications</span>
+      <span class="eyebrow">能力与资质</span>
       <h2>能力与资质</h2>
       <p>根据资料整理出的公司能力重点与代表性履历。</p>
     </div>

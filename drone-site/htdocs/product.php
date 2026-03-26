@@ -130,7 +130,7 @@ $relatedCases = isset($productToCases[$slug]) ? $productToCases[$slug] : array()
 <section class="section">
   <div class="container">
     <div class="section-header centered">
-      <span class="eyebrow">Product Media</span>
+      <span class="eyebrow">媒体资料</span>
       <h2>图像与媒体资料</h2>
       <p>基于现有素材，为该产品匹配了更接近的图片；若有视频文件，也会直接嵌入展示。</p>
     </div>
@@ -158,7 +158,7 @@ $relatedCases = isset($productToCases[$slug]) ? $productToCases[$slug] : array()
 <section class="section dark-section">
   <div class="container">
     <div class="section-header centered">
-      <span class="eyebrow">Related Cases</span>
+      <span class="eyebrow">相关案例</span>
       <h2>相关案例</h2>
       <p>该产品可进一步对应到以下应用案例页面。</p>
     </div>
