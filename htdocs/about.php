@@ -19,6 +19,15 @@
       <a href="contact.php" class="cta">联系我们</a>
     </nav>
   </div>
+  <div class="container mobile-nav-wrap">
+    <nav class="mobile-menu">
+      <a href="about.php">公司介绍</a>
+      <a href="products.php">产品中心</a>
+      <a href="cases.php">应用案例</a>
+      <a href="news.php">新闻资讯</a>
+      <a href="contact.php">联系我们</a>
+    </nav>
+  </div>
 </header>
 
 <section class="page-hero">
