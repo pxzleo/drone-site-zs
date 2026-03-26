@@ -269,12 +269,12 @@ $featured = array_slice($products, 0, 8, true);
 
 
 
-<footer class="footer">
-  <div class="container footer-bottom">
-    <div>© <?php echo date('Y'); ?> 北京飞行魔方科技有限公司</div>
-    <div>flicube.com</div>
+<footer class="footer" style="background:linear-gradient(180deg,rgba(8,18,30,.96),rgba(5,12,22,.98));border-top:1px solid rgba(255,255,255,.08);padding-top:32px;">
+  <div class="container footer-bottom" style="color:#eef6ff;">
+    <div style="color:#eef6ff;">© <?php echo date('Y'); ?> 北京飞行魔方科技有限公司</div>
+    <div style="color:#d9ebff;">flicube.com</div>
   </div>
-  <div class="container" style="margin-top:12px;text-align:center;font-size:13px;color:#e8f3ff;font-weight:600;letter-spacing:.02em;">
+  <div class="container" style="margin-top:14px;text-align:center;font-size:14px;color:#ffffff;font-weight:700;letter-spacing:.03em;text-shadow:0 2px 10px rgba(0,0,0,.35);">
     备案号：京ICP备17001976号-2
   </div>
 </footer>
