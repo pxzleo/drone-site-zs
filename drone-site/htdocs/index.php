@@ -33,7 +33,7 @@ $featured = array_slice($products, 0, 8, true);
   <div class="container hero-content hero-single">
     <div class="hero-copy">
       <span class="eyebrow">Low-Altitude Economy · Logistics / Firefighting / Drone Show / eVTOL</span>
-      <h1 class="hero-title">低空物流、消防、编队与载人平台的一体化产品体系</h1>
+      <h1 class="hero-title">涵盖低空物流、应急、编队、大载重等多场景产品体系</h1>
       <p>北京飞行魔方科技成立于 2016 年，聚焦飞控、机体、AI 与云平台一体化研发，产品覆盖物流无人机、应急消防无人机、编队表演平台、载人飞行器与低空飞行综合管理服务平台。</p>
       <div class="hero-actions">
         <a class="btn btn-primary" href="products.php">Explore Our Fleet</a>
