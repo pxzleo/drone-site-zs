@@ -1,5 +1,5 @@
 <?php
-$products = require __DIR__ . '/../myfolder/products.php';
+$products = require __DIR__ . '/myfolder/products.php';
 $featured = array_slice($products, 0, 8, true);
 ?>
 <!doctype html>
@@ -27,7 +27,9 @@ $featured = array_slice($products, 0, 8, true);
 </header>
 
 <section class="hero hero-tall">
-  <img class="hero-bg" src="assets/customer/homepage/home-hero.jpg" alt="飞行魔方无人机主视觉">
+  <video class="hero-bg hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/customer/homepage/home-hero.jpg" aria-label="飞行魔方物流无人机视频主视觉">
+    <source src="assets/customer/homepage/webvideo1.mp4" type="video/mp4">
+  </video>
   <div class="container hero-content hero-single">
     <div class="hero-copy">
       <span class="eyebrow">Low-Altitude Economy · Logistics / Firefighting / Drone Show / eVTOL</span>
@@ -78,8 +80,8 @@ $featured = array_slice($products, 0, 8, true);
   <div class="container showcase reverse-mobile">
     <div>
       <div class="section-header">
-        <h2>以“飞控 + 机体 + AI + 云”打造真实可交付的低空能力</h2>
-        <p>飞行魔方专注低空经济场景下的整机、系统和平台协同交付，不只展示设备，更强调产品落地、任务执行和后续运营能力。</p>
+        <h2>以“飞控 + 机体 + AI + 云”构建面向低空场景的产品与服务能力</h2>
+        <p>飞行魔方聚焦低空经济场景下的整机、系统和平台协同交付，网站内容以现有资料整理为基础，主要展示产品方向、应用场景与配套服务能力。</p>
       </div>
       <div class="dark-panel">
         <p>公司具备自研自适应 PID 算法和优化的 EKF 多传感器融合算法，拥有多旋翼、直升机、固定翼、eVTOL 等构型空气动力学与结构设计经验，并通过云原生微服务平台支撑批量调度控制、实时监测、空域合规校验与高清直播。</p>
@@ -140,16 +142,16 @@ $featured = array_slice($products, 0, 8, true);
     <div class="section-header centered">
       <span class="eyebrow">Why Magic Flight</span>
       <h2>核心能力</h2>
-      <p>围绕飞控、机体、AI 与云平台，构建更高可靠性、更强适应性和更完整交付能力。</p>
+      <p>围绕飞控、机体、AI 与云平台，形成覆盖研发、交付与平台协同的综合能力。</p>
     </div>
     <div class="grid grid-3">
       <div class="dark-panel tall-panel">
         <h3>深耕飞控核心</h3>
-        <p>自研自适应 PID 算法和优化的 EKF 多传感器融合算法，提供更宽适应性与更强飞行响应能力，适配多机型和复杂环境任务。</p>
+        <p>自研自适应 PID 算法和 EKF 多传感器融合算法，可用于支持多机型飞行控制与复杂场景下的任务需求。</p>
       </div>
       <div class="dark-panel tall-panel">
         <h3>机载 AI 与边缘计算</h3>
-        <p>集成高效异构 GPU，支持视觉 SLAM、目标识别与避障，并通过轻量模型压缩方案提升空中实时识别和应急决策效率。</p>
+        <p>集成异构 GPU，支持视觉 SLAM、目标识别与避障，并可结合轻量模型方案用于空中识别与任务辅助决策。</p>
       </div>
       <div class="dark-panel tall-panel">
         <h3>统一云端运营平台</h3>
@@ -271,6 +273,16 @@ $featured = array_slice($products, 0, 8, true);
       <p>产品矩阵重建</p>
       <p>真实图片素材接入</p>
       <p>模板文案清理</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section-tight">
+  <div class="container">
+    <div class="dark-panel">
+      <h3>内容说明</h3>
+      <p>本网站所载产品参数、图片、案例及相关介绍主要依据现有资料整理，仅供沟通参考，不构成性能承诺或正式交付标准。具体配置、功能、适用场景、服务内容及合作方式，请以双方正式沟通、测试结果及合同约定为准。</p>
     </div>
   </div>
 </section>
