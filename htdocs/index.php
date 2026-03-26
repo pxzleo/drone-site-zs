@@ -274,8 +274,8 @@ $featured = array_slice($products, 0, 8, true);
     <div>© <?php echo date('Y'); ?> 北京飞行魔方科技有限公司</div>
     <div>flicube.com</div>
   </div>
-  <div class="container" style="margin-top:10px;text-align:center;font-size:13px;color:#c9dbef;">
-    京ICP备17001976号-2
+  <div class="container" style="margin-top:12px;text-align:center;font-size:13px;color:#e8f3ff;font-weight:600;letter-spacing:.02em;">
+    备案号：京ICP备17001976号-2
   </div>
 </footer>
 </body>
