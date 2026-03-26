@@ -37,8 +37,6 @@
     <div class="contact-card emphasis">
       <h2>商务联系</h2>
       <p><strong>公司名称：</strong>北京飞行魔方科技有限公司</p>
-      <p><strong>联系人：</strong>潘先生</p>
-      <p><strong>联系电话：</strong>13671086911</p>
       <p><strong>联系邮箱：</strong>pxzleo@126.com</p>
       <p><strong>公司地址：</strong>北京市昌平区史各庄街道生命科学园路北清创意园4-1楼</p>
       <p><strong>核心业务：</strong>物流无人机、应急消防、编队表演、载人飞行器、低空管理平台</p>
@@ -60,7 +58,7 @@
       <div class="timeline" style="margin-top:28px">
         <div class="timeline-item"><strong>资料沟通</strong><br>确认行业场景、任务目标和产品方向。</div>
         <div class="timeline-item"><strong>方案整理</strong><br>输出机型建议、参数重点和实施思路。</div>
-        <div class="timeline-item"><strong>正式联系</strong><br>可通过电话或邮箱进一步沟通合作方案与产品资料。</div>
+        <div class="timeline-item"><strong>正式联系</strong><br>可通过邮箱进一步沟通合作方案与产品资料。</div>
       </div>
     </div>
   </div>
