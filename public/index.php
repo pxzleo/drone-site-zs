@@ -31,11 +31,11 @@ $featured = array_slice($products, 0, 8, true);
   <div class="container hero-content hero-single">
     <div class="hero-copy">
       <span class="eyebrow">Low-Altitude Economy · Logistics / Firefighting / Drone Show / eVTOL</span>
-      <h1 class="hero-title">以创新产品，服务低空经济核心场景</h1>
-      <p>北京飞行魔方科技成立于 2016 年，团队由清华、北航技术骨干及前亿航高管组成，具备从飞控、机体到整机量产的研产一体能力，产品覆盖物流无人机、编队表演、小型载人飞行器、应急消防装备及无人机监管平台。</p>
+      <h1 class="hero-title">低空物流、消防、编队与载人平台的一体化产品体系</h1>
+      <p>北京飞行魔方科技成立于 2016 年，聚焦飞控、机体、AI 与云平台一体化研发，产品覆盖物流无人机、应急消防无人机、编队表演平台、载人飞行器与低空飞行综合管理服务平台。</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="products.php">查看产品矩阵</a>
-        <a class="btn btn-secondary" href="contact.php">预约方案咨询</a>
+        <a class="btn btn-primary" href="products.php">Explore Our Fleet</a>
+        <a class="btn btn-secondary" href="#gallery">View Media</a>
       </div>
     </div>
   </div>
@@ -45,16 +45,16 @@ $featured = array_slice($products, 0, 8, true);
   <div class="container">
     <div class="hero-intro-panel">
       <div class="hero-intro-copy">
-        <strong>核心方向</strong>
-        <span>物流运输 / 应急消防 / 编队演艺 / 载人体验 / 低空管理平台</span>
+        <strong>物流无人机</strong>
+        <span>覆盖 5kg 至 300kg 多级运载能力</span>
       </div>
       <div class="hero-intro-copy">
-        <strong>研发能力</strong>
-        <span>飞控、机体、AI、云平台一体化协同研发</span>
+        <strong>应急消防</strong>
+        <span>150kg 大载重消防投弹无人机平台</span>
       </div>
       <div class="hero-intro-copy">
-        <strong>服务模式</strong>
-        <span>产品交付、任务实施、平台支持与长期运维</span>
+        <strong>编队与载人</strong>
+        <span>室外编队、室内编队与轻型载人展示平台</span>
       </div>
     </div>
     <div class="hero-stats-grid">
@@ -101,9 +101,9 @@ $featured = array_slice($products, 0, 8, true);
 <section class="section dark-section" id="fleet">
   <div class="container">
     <div class="section-header centered">
-      <span class="eyebrow">Our Products</span>
-      <h2>覆盖物流、消防、编队、载人与平台服务的产品矩阵</h2>
-      <p>基于你提供的资料，已将主要产品整理为独立详情页，便于继续补充参数、视频、照片与下载入口。</p>
+      <span class="eyebrow">Our Fleet</span>
+      <h2>核心产品矩阵</h2>
+      <p>从轻型物流平台到重载运输系统，从消防装备到编队与载人展示平台，形成覆盖多场景的产品组合。</p>
     </div>
     <div class="grid grid-3 cards-lift">
       <?php foreach ($featured as $slug => $product): ?>
@@ -138,9 +138,9 @@ $featured = array_slice($products, 0, 8, true);
 <section class="section" id="technology">
   <div class="container">
     <div class="section-header centered">
-      <span class="eyebrow">Technology Highlights</span>
-      <h2>技术优势</h2>
-      <p>围绕核心飞控、机体设计、AI 识别与云端调度，构建多场景低空产品能力。</p>
+      <span class="eyebrow">Why Magic Flight</span>
+      <h2>核心能力</h2>
+      <p>围绕飞控、机体、AI 与云平台，构建更高可靠性、更强适应性和更完整交付能力。</p>
     </div>
     <div class="grid grid-3">
       <div class="dark-panel tall-panel">
@@ -178,9 +178,9 @@ $featured = array_slice($products, 0, 8, true);
 <section class="section dark-section" id="gallery">
   <div class="container">
     <div class="section-header centered compact-header">
-      <span class="eyebrow">Media Gallery</span>
+      <span class="eyebrow">In Pictures</span>
       <h2>核心影像</h2>
-      <p>首页只保留消防、物流、编队、载人四类核心画面，减少拼贴感，强化整体视觉一致性。</p>
+      <p>围绕消防、物流、编队与载人平台保留四类核心画面，让首页结构更接近专业无人机官网的展示方式。</p>
     </div>
     <div class="home-media-grid">
       <div class="media-feature media-fire photo-toned">
