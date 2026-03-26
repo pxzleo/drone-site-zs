@@ -31,7 +31,7 @@ $productLinks = [
 <body>
 <header class="site-header">
   <div class="container nav">
-    <a class="brand brand-logo" href="index.php"><img src="assets/customer/logo.png" alt="飞行魔方 Logo"><span><small>Flight Cube Tech</small></span></a>
+    <a class="brand brand-logo" href="index.php"><img src="assets/customer/logo.png" alt="飞行魔方 Logo"></a>
     <nav class="menu">
       <a href="index.php">首页</a>
       <a href="about.php">公司介绍</a>
