@@ -96,7 +96,7 @@ $featured = array_slice($products, 0, 8, true);
         </div>
       </div>
     </div>
-    <div class="photo dramatic photo-toned"><img src="assets/customer/homepage/home-about.jpg" alt="飞行魔方物流无人机"></div>
+    <div class="photo dramatic photo-toned"><img src="assets/customer/logistics-150-2.png" alt="飞行魔方物流无人机"></div>
   </div>
 </section>
 
