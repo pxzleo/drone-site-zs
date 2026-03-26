@@ -272,7 +272,10 @@ $featured = array_slice($products, 0, 8, true);
 <footer class="footer">
   <div class="container footer-bottom">
     <div>© <?php echo date('Y'); ?> 北京飞行魔方科技有限公司</div>
-    <div>Low-Altitude Logistics · Firefighting · Drone Show · eVTOL · Platform · flicube.com</div>
+    <div>flicube.com</div>
+  </div>
+  <div class="container" style="margin-top:10px;text-align:center;font-size:13px;color:#c9dbef;">
+    京ICP备17001976号-2
   </div>
 </footer>
 </body>
