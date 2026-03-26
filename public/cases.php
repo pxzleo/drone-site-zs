@@ -1,3 +1,4 @@
+<?php $cases = require __DIR__ . '/../data/cases.php'; ?>
 <!doctype html>
 <html lang="zh-CN">
 <head>
@@ -34,17 +35,21 @@
 
 <section class="section dark-section">
   <div class="container grid grid-2">
-    <div class="card case-card"><img src="assets/customer/logistics-150-1.png" alt="低空物流"><div class="card-body"><h3>低空物流运输</h3><p>覆盖 5kg 到 300kg 多级物流无人机，适用于最后一公里配送、山区补给、海岛投送、工业运输和农业挂载等场景。</p></div></div>
-    <div class="card case-card"><img src="assets/customer/logistics-100-x13.png" alt="100 公斤运输平台"><div class="card-body"><h3>中重载工业运输</h3><p>100 公斤级运输平台适合工业运输、应急投送和行业作业挂载，兼顾大载重、模块化部署与运输便利性。</p></div></div>
-    <div class="card case-card"><img src="assets/customer/fire-hero.png" alt="应急消防"><div class="card-body"><h3>应急消防与灾害救援</h3><p>FC-F150pro 可应用于森林火灾、城市建筑、危化品和灾害救援场景，提供快速响应、定点投弹和复杂环境安全飞行能力。</p></div></div>
-    <div class="card case-card"><img src="assets/customer/show-a8.png" alt="编队表演"><div class="card-body"><h3>文旅演艺与品牌活动</h3><p>室外星幻编队无人机和室内编队平台适用于节庆活动、商业发布、城市庆典和夜游项目，支持图案、文字与沉浸式视觉表达。</p></div></div>
-    <div class="card case-card"><img src="assets/customer/manned-p.png" alt="载人飞行器"><div class="card-body"><h3>载人展示与未来低空体验</h3><p>蛋壳飞行器面向展示、体验和试验性低空应用，体现公司在多类型飞行平台上的研发与结构能力。</p></div></div>
-    <div class="card case-card"><img src="assets/customer/fire-title.png" alt="低空管理平台"><div class="card-body"><h3>低空飞行综合管理服务平台</h3><p>支持多机集群统计、飞机管理、航线规划、站点规划与任务绑定，可为物流、应急、安全、农业等行业提供平台级支撑。</p></div></div>
-    <div class="card case-card"><img src="assets/customer/show-line1.png" alt="室内编队设计"><div class="card-body"><h3>室内外联动演出方案</h3><p>室内近场编队和室外大规模编队可根据场地条件形成组合方案，适合展会、科技馆、品牌活动和商业空间视觉秀演。</p></div></div>
-    <div class="card case-card"><img src="assets/customer/show-line3.png" alt="室内编队图案"><div class="card-body"><h3>室内编队图案设计</h3><p>通过室内编队线框图和图案规划能力，可支持品牌活动、展馆演示和商业空间近距离视觉秀演。</p></div></div>
+    <?php foreach ($cases as $slug => $case): ?>
+      <article class="card case-card">
+        <img src="<?= htmlspecialchars($case['image']) ?>" alt="<?= htmlspecialchars($case['title']) ?>">
+        <div class="card-body">
+          <h3><?= htmlspecialchars($case['title']) ?></h3>
+          <p><?= htmlspecialchars($case['summary']) ?></p>
+          <div class="hero-actions" style="margin-top:18px;">
+            <a class="btn btn-secondary" href="case.php?slug=<?= urlencode($slug) ?>">查看案例详情</a>
+          </div>
+        </div>
+      </article>
+    <?php endforeach; ?>
   </div>
 </section>
 
-<footer class="footer"><div class="container footer-bottom"><div>© <?php echo date('Y'); ?> 北京飞行魔方科技有限公司</div><div>应用案例页</div></div></footer>
+<footer class="footer"><div class="container footer-bottom"><div>© <?php echo date('Y'); ?> 北京飞行魔方科技有限公司</div><div>应用案例页 · flicube.com</div></div></footer>
 </body>
 </html>
