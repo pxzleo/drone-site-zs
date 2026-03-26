@@ -27,7 +27,9 @@ $featured = array_slice($products, 0, 8, true);
 </header>
 
 <section class="hero hero-tall">
-  <img class="hero-bg" src="assets/customer/homepage/home-hero.jpg" alt="飞行魔方无人机主视觉">
+  <video class="hero-bg hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/customer/homepage/home-hero.jpg" aria-label="飞行魔方物流无人机视频主视觉">
+    <source src="assets/customer/homepage/webvideo1.mp4" type="video/mp4">
+  </video>
   <div class="container hero-content hero-single">
     <div class="hero-copy">
       <span class="eyebrow">Low-Altitude Economy · Logistics / Firefighting / Drone Show / eVTOL</span>
