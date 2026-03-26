@@ -10,7 +10,7 @@
 <header class="site-header">
   <div class="container nav">
     <a class="brand brand-logo" href="index.php"><img src="assets/customer/logo.png" alt="飞行魔方 Logo"></a>
-    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="打开导航菜单"><span></span><span></span><span></span></button>
+    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="打开导航菜单">☰</button>
     <nav class="menu">
       <a href="index.php">首页</a>
       <a href="about.php">公司介绍</a>
@@ -87,22 +87,10 @@
   var btn=document.querySelector('.mobile-menu-toggle');
   var panel=document.getElementById('mobile-menu-panel');
   if(!btn||!panel) return;
-  function setOpen(open){
-    panel.classList.toggle('open', open);
-    btn.classList.toggle('open', open);
+  btn.addEventListener('click',function(){
+    var open=panel.classList.toggle('open');
     btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-  }
-  btn.addEventListener('click',function(e){
-    e.stopPropagation();
-    setOpen(!panel.classList.contains('open'));
-  });
-  document.addEventListener('click',function(e){
-    if(!panel.classList.contains('open')) return;
-    if(panel.contains(e.target) || btn.contains(e.target)) return;
-    setOpen(false);
-  });
-  panel.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click',function(){ setOpen(false); });
+    btn.textContent=open ? '✕' : '☰';
   });
 })();
 </script>
