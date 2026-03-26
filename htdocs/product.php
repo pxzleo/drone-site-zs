@@ -1,6 +1,6 @@
 <?php
-$products = require __DIR__ . '/../myfolder/products.php';
-$cases = require __DIR__ . '/../myfolder/cases.php';
+$products = require __DIR__ . '/myfolder/products.php';
+$cases = require __DIR__ . '/myfolder/cases.php';
 $slug = isset($_GET['slug']) ? $_GET['slug'] : '';
 $product = isset($products[$slug]) ? $products[$slug] : null;
 if (!$product) {
@@ -108,7 +108,7 @@ $relatedCases = isset($productToCases[$slug]) ? $productToCases[$slug] : array()
   <div class="container grid grid-3">
     <div class="dark-panel tall-panel"><h3>适用场景</h3><p><?= htmlspecialchars($product['name']) ?> 适合根据具体产品方向应用于物流运输、应急消防、文旅演艺、载人展示、低空监管平台接入等场景，并支持按任务需求进行配置调整。</p></div>
     <div class="dark-panel tall-panel"><h3>任务扩展</h3><p>支持按行业需求搭载货舱、吊挂、光电、喊话、照明或定制任务模块，并支持接口与系统联动扩展。</p></div>
-    <div class="dark-panel tall-panel"><h3>交付支持</h3><p>提供培训、维保、备件、现场支持与运营协同服务，帮助客户更高效地完成项目落地。</p></div>
+    <div class="dark-panel tall-panel"><h3>交付支持</h3><p>可提供培训、维保、备件、现场支持与运营协同服务，具体内容以实际沟通和项目约定为准。</p></div>
   </div>
 </section>
 
@@ -130,7 +130,7 @@ $relatedCases = isset($productToCases[$slug]) ? $productToCases[$slug] : array()
 <section class="section">
   <div class="container">
     <div class="section-header centered">
-      <span class="eyebrow">Product Media</span>
+      <span class="eyebrow">媒体资料</span>
       <h2>图像与媒体资料</h2>
       <p>基于现有素材，为该产品匹配了更接近的图片；若有视频文件，也会直接嵌入展示。</p>
     </div>
@@ -158,7 +158,7 @@ $relatedCases = isset($productToCases[$slug]) ? $productToCases[$slug] : array()
 <section class="section dark-section">
   <div class="container">
     <div class="section-header centered">
-      <span class="eyebrow">Related Cases</span>
+      <span class="eyebrow">相关案例</span>
       <h2>相关案例</h2>
       <p>该产品可进一步对应到以下应用案例页面。</p>
     </div>
@@ -188,6 +188,16 @@ $relatedCases = isset($productToCases[$slug]) ? $productToCases[$slug] : array()
   </div>
 </section>
 <?php endif; ?>
+
+
+<section class="section section-tight">
+  <div class="container">
+    <div class="dark-panel">
+      <h3>内容说明</h3>
+      <p>本网站所载产品参数、图片、案例及相关介绍主要依据现有资料整理，仅供沟通参考，不构成性能承诺或正式交付标准。具体配置、功能、适用场景、服务内容及合作方式，请以双方正式沟通、测试结果及合同约定为准。</p>
+    </div>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="container footer-bottom">

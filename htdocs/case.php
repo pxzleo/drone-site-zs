@@ -1,6 +1,6 @@
 <?php
-$cases = require __DIR__ . '/../myfolder/cases.php';
-$products = require __DIR__ . '/../myfolder/products.php';
+$cases = require __DIR__ . '/myfolder/cases.php';
+$products = require __DIR__ . '/myfolder/products.php';
 $slug = isset($_GET['slug']) ? $_GET['slug'] : '';
 $case = isset($cases[$slug]) ? $cases[$slug] : null;
 if (!$case) {
@@ -57,7 +57,7 @@ $productLinks = [
       <div class="product-layout">
         <div class="photo"><img src="<?= htmlspecialchars($case['image']) ?>" alt="<?= htmlspecialchars($case['title']) ?>"></div>
         <div>
-          <span class="eyebrow">Use Case Detail</span>
+          <span class="eyebrow">案例详情</span>
           <h1 class="detail-title"><?= htmlspecialchars($case['title']) ?></h1>
           <p style="font-size:18px;color:#d5e4f8"><?= htmlspecialchars($case['subtitle']) ?></p>
           <p><?= htmlspecialchars($case['summary']) ?></p>
@@ -135,6 +135,16 @@ $productLinks = [
   </div>
 </section>
 <?php endif; ?>
+
+
+<section class="section section-tight">
+  <div class="container">
+    <div class="dark-panel">
+      <h3>内容说明</h3>
+      <p>本网站所载产品参数、图片、案例及相关介绍主要依据现有资料整理，仅供沟通参考，不构成性能承诺或正式交付标准。具体配置、功能、适用场景、服务内容及合作方式，请以双方正式沟通、测试结果及合同约定为准。</p>
+    </div>
+  </div>
+</section>
 
 <footer class="footer">
   <div class="container footer-bottom">

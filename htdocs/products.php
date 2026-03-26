@@ -1,4 +1,4 @@
-<?php $products = require __DIR__ . '/../myfolder/products.php'; ?>
+<?php $products = require __DIR__ . '/myfolder/products.php'; ?>
 <!doctype html>
 <html lang="zh-CN">
 <head>
@@ -26,7 +26,7 @@
   <div class="container">
     <div class="breadcrumb"><a href="index.php">首页</a> / 产品中心</div>
     <div class="section-header">
-      <span class="eyebrow">Product Fleet</span>
+      <span class="eyebrow">产品矩阵</span>
       <h1>物流、消防、编队、载人飞行器与低空管理平台产品矩阵</h1>
       <p>已根据你提供的 PDF、DOCX、PPTX 与图片资料，整理出主要产品条目与独立详情页。</p>
     </div>
@@ -52,6 +52,16 @@
         </div>
       </article>
     <?php endforeach; ?>
+  </div>
+</section>
+
+
+<section class="section section-tight">
+  <div class="container">
+    <div class="dark-panel">
+      <h3>内容说明</h3>
+      <p>本网站所载产品参数、图片、案例及相关介绍主要依据现有资料整理，仅供沟通参考，不构成性能承诺或正式交付标准。具体配置、功能、适用场景、服务内容及合作方式，请以双方正式沟通、测试结果及合同约定为准。</p>
+    </div>
   </div>
 </section>
 

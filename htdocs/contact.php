@@ -25,7 +25,7 @@
   <div class="container">
     <div class="breadcrumb"><a href="index.php">首页</a> / 联系我们</div>
     <div class="section-header">
-      <span class="eyebrow">Contact Us</span>
+      <span class="eyebrow">联系我们</span>
       <h1>欢迎联系北京飞行魔方科技有限公司</h1>
       <p>获取物流无人机、应急消防无人机、编队表演方案、载人飞行器资料及低空飞行综合管理服务平台方案。</p>
     </div>
@@ -62,6 +62,16 @@
         <div class="timeline-item"><strong>方案整理</strong><br>输出机型建议、参数重点和实施思路。</div>
         <div class="timeline-item"><strong>正式联系</strong><br>可通过电话或邮箱进一步沟通合作方案与产品资料。</div>
       </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section section-tight">
+  <div class="container">
+    <div class="dark-panel">
+      <h3>内容说明</h3>
+      <p>本网站所载产品参数、图片、案例及相关介绍主要依据现有资料整理，仅供沟通参考，不构成性能承诺或正式交付标准。具体配置、功能、适用场景、服务内容及合作方式，请以双方正式沟通、测试结果及合同约定为准。</p>
     </div>
   </div>
 </section>

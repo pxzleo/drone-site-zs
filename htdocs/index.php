@@ -32,12 +32,12 @@ $featured = array_slice($products, 0, 8, true);
   </video>
   <div class="container hero-content hero-single">
     <div class="hero-copy">
-      <span class="eyebrow">Low-Altitude Economy · Logistics / Firefighting / Drone Show / eVTOL</span>
+      <span class="eyebrow">低空经济 · 物流 / 应急 / 编队 / 大载重</span>
       <h1 class="hero-title">低空物流、应急、编队、大载重等多场景产品体系</h1>
       <p>北京飞行魔方科技成立于 2016 年，聚焦飞控、机体、AI 与云平台一体化研发，产品覆盖物流无人机、应急消防无人机、编队表演平台、载人飞行器与低空飞行综合管理服务平台。</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="products.php">Explore Our Fleet</a>
-        <a class="btn btn-secondary" href="#gallery">View Media</a>
+        <a class="btn btn-primary" href="products.php">查看产品矩阵</a>
+        <a class="btn btn-secondary" href="#gallery">查看核心影像</a>
       </div>
     </div>
   </div>
@@ -103,7 +103,7 @@ $featured = array_slice($products, 0, 8, true);
 <section class="section dark-section" id="fleet">
   <div class="container">
     <div class="section-header centered">
-      <span class="eyebrow">Our Fleet</span>
+      <span class="eyebrow">产品矩阵</span>
       <h2>核心产品矩阵</h2>
       <p>从轻型物流平台到重载运输系统，从消防装备到编队与载人展示平台，形成覆盖多场景的产品组合。</p>
     </div>
@@ -140,7 +140,7 @@ $featured = array_slice($products, 0, 8, true);
 <section class="section" id="technology">
   <div class="container">
     <div class="section-header centered">
-      <span class="eyebrow">Why Magic Flight</span>
+      <span class="eyebrow">核心能力</span>
       <h2>核心能力</h2>
       <p>围绕飞控、机体、AI 与云平台，形成覆盖研发、交付与平台协同的综合能力。</p>
     </div>
@@ -165,7 +165,7 @@ $featured = array_slice($products, 0, 8, true);
   <div class="container showcase">
     <div class="photo cinematic photo-toned"><img src="assets/customer/homepage/home-story.jpg" alt="飞行魔方编队表演"></div>
     <div class="dark-panel story-panel">
-      <span class="eyebrow">How We Deliver</span>
+      <span class="eyebrow">交付方式</span>
       <h2>从整机研发，到场景交付，再到持续运营支持</h2>
       <p>飞行魔方不仅提供单一产品，还围绕行业任务流程提供参数配置、系统平台、培训和运维支持，让无人机能力真正变成可执行的业务能力。</p>
       <div class="timeline">
@@ -180,7 +180,7 @@ $featured = array_slice($products, 0, 8, true);
 <section class="section dark-section" id="gallery">
   <div class="container">
     <div class="section-header centered compact-header">
-      <span class="eyebrow">In Pictures</span>
+      <span class="eyebrow">影像资料</span>
       <h2>核心影像</h2>
       <p>围绕消防、物流、编队与载人平台保留四类核心画面，让首页结构更接近专业无人机官网的展示方式。</p>
     </div>
@@ -224,7 +224,7 @@ $featured = array_slice($products, 0, 8, true);
 <section class="section testimonials">
   <div class="container">
     <div class="section-header centered">
-      <span class="eyebrow">Qualifications</span>
+      <span class="eyebrow">资质与经验</span>
       <h2>资质与项目经验</h2>
       <p>基于资料整理，目前已在网站中突出展示公司的核心能力与代表性资质方向。</p>
     </div>
@@ -238,7 +238,7 @@ $featured = array_slice($products, 0, 8, true);
 
 <section class="section section-tight">
   <div class="container cta-banner giant-cta">
-    <span class="eyebrow">Ready To Work Together?</span>
+    <span class="eyebrow">欢迎进一步沟通</span>
     <h2>获取产品资料、项目方案与定制化低空解决方案</h2>
     <p>如果你还要，我可以继续把 PDF / DOCX 里的更多参数表、视频展示区和下载入口做进正式页面。</p>
     <div class="hero-actions">
