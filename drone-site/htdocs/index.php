@@ -90,7 +90,7 @@ $featured = array_slice($products, 0, 8, true);
     <div>
       <div class="section-header">
         <h2>以“飞控 + 机体 + AI + 云”构建面向低空场景的产品与服务能力</h2>
-        <p>飞行魔方聚焦低空经济场景下的整机、系统和平台协同交付，网站内容以现有资料整理为基础，主要展示产品方向、应用场景与配套服务能力。</p>
+        <p>飞行魔方聚焦低空经济场景下的整机、系统和平台协同交付，围绕产品方向、应用场景与配套服务能力展开整体展示。</p>
       </div>
       <div class="dark-panel">
         <p>公司具备自研自适应 PID 算法和优化的 EKF 多传感器融合算法，拥有多旋翼、直升机、固定翼、eVTOL 等构型空气动力学与结构设计经验，并通过云原生微服务平台支撑批量调度控制、实时监测、空域合规校验与高清直播。</p>
@@ -230,12 +230,12 @@ $featured = array_slice($products, 0, 8, true);
   <div class="container">
     <div class="section-header centered">
       <h2>资质与项目经验</h2>
-      <p>基于资料整理，目前已在网站中突出展示公司的核心能力与代表性资质方向。</p>
+      <p>集中展示公司的核心能力、项目经验与资质方向。</p>
     </div>
     <div class="grid grid-3">
       <div class="card quote-card"><div class="card-body"><p>“公司拥有超 20 项专利与软著，具备从飞控、机体到整机量产的一体化研发能力。”</p><strong>— 研发与知识产权能力</strong></div></div>
       <div class="card quote-card"><div class="card-body"><p>“团队成员来自亿航、北航、清华、北邮等背景，参与过载人 eVTOL、低空经济示范、公安应急和跨海物流等重点项目。”</p><strong>— 项目与合规经验</strong></div></div>
-      <div class="card quote-card"><div class="card-body"><p>“资料中展示了中关村高新技术企业、通航企业许可、无人驾驶航空器运营许可、成都大运会合作伙伴等方向。”</p><strong>— 企业资质与合作履历</strong></div></div>
+      <div class="card quote-card"><div class="card-body"><p>“公司业务覆盖高新技术企业、通航企业许可、无人驾驶航空器运营许可及大型项目合作等方向。”</p><strong>— 企业资质与合作履历</strong></div></div>
     </div>
   </div>
 </section>

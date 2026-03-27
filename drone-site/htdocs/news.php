@@ -48,10 +48,10 @@
       <div class="media-card"><img src="assets/customer/show-line3.png" alt="室内编队设计图"><p>室内编队设计图</p></div>
     </div>
     <div class="grid grid-3">
-      <article class="card news-card"><div class="card-body"><span class="news-date">2026-03-26</span><h3>官网内容更新完成</h3><p>网站已围绕公司介绍、产品中心、应用案例与联系信息进行统一更新，展示飞行魔方在低空领域的业务内容与产品方向。</p></div></article>
-      <article class="card news-card"><div class="card-body"><span class="news-date">2025-10</span><h3>FC-F150pro 聚焦智慧消防场景</h3><p>资料显示，该平台面向森林火灾、城市建筑、危化品和灾害救援场景，支持大载重消防投弹与双光成像作业。</p></div></article>
+      <article class="card news-card"><div class="card-body"><span class="news-date">2026-03-26</span><h3>官网内容焕新上线</h3><p>网站围绕公司介绍、产品中心、应用案例与联系信息进行统一展示，呈现飞行魔方在低空领域的业务内容与产品方向。</p></div></article>
+      <article class="card news-card"><div class="card-body"><span class="news-date">2025-10</span><h3>FC-F150pro 聚焦智慧消防场景</h3><p>该平台面向森林火灾、城市建筑、危化品和灾害救援场景，支持大载重消防投弹与双光成像作业。</p></div></article>
       <article class="card news-card"><div class="card-body"><span class="news-date">2025</span><h3>150 公斤与 300 公斤物流无人机平台持续扩展</h3><p>FC-TS150 与 FC-TS300 面向高载重运输、挂载投送与自动物流流程，展示了飞行魔方在重载物流方向的布局。</p></div></article>
-      <article class="card news-card"><div class="card-body"><span class="news-date">2025</span><h3>星幻编队无人机可用于大型室外演出</h3><p>资料显示，多星多频 RTK、升级动力系统与自主网通信系统可用于支持外场复杂环境下的编队任务。</p></div></article>
+      <article class="card news-card"><div class="card-body"><span class="news-date">2025</span><h3>星幻编队无人机可用于大型室外演出</h3><p>多星多频 RTK、升级动力系统与自主网通信系统可用于支持外场复杂环境下的编队任务。</p></div></article>
       <article class="card news-card"><div class="card-body"><span class="news-date">2025</span><h3>室内编队方案适合近场沉浸式活动</h3><p>室内编队无人机采用 UWB 定位，适合展会、发布会和商业空间中的图案、字母与数字类视觉表达。</p></div></article>
       <article class="card news-card"><div class="card-body"><span class="news-date">2025</span><h3>低空飞行综合管理服务平台支持多行业接入</h3><p>平台支持多机管理、航线设计、任务绑定与站点规划，可服务物流、消防、安全、农业等行业。</p></div></article>
     </div>

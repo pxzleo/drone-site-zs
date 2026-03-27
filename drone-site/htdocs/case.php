@@ -84,7 +84,7 @@ $productLinks = [
 <section class="section">
   <div class="container grid grid-2">
     <div class="dark-panel">
-      <h2>资料中的场景背景</h2>
+      <h2>场景背景</h2>
       <ul class="feature-list">
         <?php foreach ($case['pain_points'] as $item): ?>
           <li><?= htmlspecialchars($item) ?></li>
@@ -92,7 +92,7 @@ $productLinks = [
       </ul>
     </div>
     <div class="dark-panel">
-      <h2>资料中的方案描述</h2>
+      <h2>方案描述</h2>
       <p><?= htmlspecialchars($case['solution']) ?></p>
     </div>
   </div>
@@ -115,7 +115,7 @@ $productLinks = [
       </ul>
     </div>
     <div class="dark-panel tall-panel">
-      <h3>资料中的实施流程</h3>
+      <h3>实施流程</h3>
       <ul class="feature-list compact">
         <?php foreach ($case['process'] as $item): ?>
           <li><?= htmlspecialchars($item) ?></li>
