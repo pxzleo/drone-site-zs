@@ -74,7 +74,7 @@
       <div class="timeline-item"><strong>自主研发能力</strong><br>覆盖飞控、机体、AI、云平台和多机型整机设计，具备研产一体能力。</div>
       <div class="timeline-item"><strong>产品覆盖广</strong><br>布局物流无人机、应急消防、编队表演、载人飞行器和低空管理服务平台。</div>
       <div class="timeline-item"><strong>项目经验</strong><br>团队参与成熟载人 eVTOL、国家低空经济示范、公安应急与跨海物流等重点项目。</div>
-      <div class="timeline-item"><strong>资质方向</strong><br>资料中提到超 20 项专利与软著、中关村高新技术企业、通航企业许可、无人驾驶航空器运营许可、成都大运会合作伙伴等。</div>
+      <div class="timeline-item"><strong>资质方向</strong><br>覆盖专利与软著、高新技术企业、通航企业许可、无人驾驶航空器运营许可及大型项目合作等方向。</div>
     </div>
   </div>
 </section>

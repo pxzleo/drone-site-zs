@@ -140,7 +140,7 @@ $relatedCases = isset($productToCases[$slug]) ? $productToCases[$slug] : array()
   <div class="container">
     <div class="section-header centered">
       <h2>图像与媒体资料</h2>
-      <p>基于现有素材，为该产品匹配了更接近的图片；若有视频文件，也会直接嵌入展示。</p>
+      <p>展示与该产品相关的图像与视频内容，便于了解产品外观与应用场景。</p>
     </div>
     <div class="media-grid">
       <?php foreach ($gallery as $mediaImage): ?>

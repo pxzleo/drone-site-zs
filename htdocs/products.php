@@ -37,7 +37,7 @@
     <div class="breadcrumb"><a href="index.php">首页</a> / 产品中心</div>
     <div class="section-header">
       <h1>物流、消防、编队、载人飞行器与低空管理平台产品矩阵</h1>
-      <p>已根据你提供的 PDF、DOCX、PPTX 与图片资料，整理出主要产品条目与独立详情页。</p>
+      <p>围绕物流、消防、编队、载人飞行器与低空管理平台等方向，集中展示公司主要产品与相关页面内容。</p>
     </div>
   </div>
 </section>
