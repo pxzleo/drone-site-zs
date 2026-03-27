@@ -1,8 +1,8 @@
 <?php
 $products = require __DIR__ . '/myfolder/products.php';
 $featured = array_slice($products, 0, 8, true);
+require __DIR__ . '/i18n.php';
 ?>
-<?php require __DIR__ . '/i18n.php'; ?>
 <!doctype html>
 <html lang="<?= $lang === 'zh' ? 'zh-CN' : 'en' ?>">
 <head>
@@ -14,9 +14,8 @@ $featured = array_slice($products, 0, 8, true);
 </head>
 <body>
 <?php render_header('home'); ?>
-
 <section class="hero hero-tall">
-  <video class="hero-bg hero-video" autoplay muted loop playsinline preload="auto" poster="assets/customer/homepage/webvideo1-poster.jpg" aria-label="飞行魔方物流无人机视频主视觉">
+  <video class="hero-bg hero-video" autoplay muted loop playsinline preload="auto" poster="assets/customer/homepage/webvideo1-poster.jpg" aria-label="<?= htmlspecialchars(t('飞行魔方物流无人机视频主视觉', 'Flicube logistics drone video hero')) ?>">
     <source src="assets/customer/homepage/webvideo1-web.mp4" type="video/mp4">
   </video>
   <div class="container hero-content hero-single">
@@ -30,246 +29,14 @@ $featured = array_slice($products, 0, 8, true);
     </div>
   </div>
 </section>
-
-<section class="section section-tight hero-stats-wrap">
-  <div class="container">
-    <div class="hero-intro-panel">
-      <div class="hero-intro-copy">
-        <strong>物流无人机</strong>
-        <span>覆盖 5kg 至 300kg 多级运载能力</span>
-      </div>
-      <div class="hero-intro-copy">
-        <strong>应急消防</strong>
-        <span>150kg 大载重消防投弹无人机平台</span>
-      </div>
-      <div class="hero-intro-copy">
-        <strong>编队与载人</strong>
-        <span>室外编队、室内编队与轻型载人展示平台</span>
-      </div>
-    </div>
-    <div class="hero-stats-grid">
-      <div class="metric"><div><strong>2016</strong><span>公司成立时间</span></div></div>
-      <div class="metric"><div><strong>5kg-300kg</strong><span>物流无人机载重覆盖</span></div></div>
-      <div class="metric"><div><strong>20+</strong><span>专利与软著</span></div></div>
-      <div class="metric"><div><strong>飞控+机体+AI+云</strong><span>一体化研发能力</span></div></div>
-    </div>
-    <div class="logo-strip" style="margin-top:18px;">
-      <span>智慧物流</span>
-      <span>应急消防</span>
-      <span>文旅演艺</span>
-      <span>载人体验</span>
-      <span>低空监管</span>
-      <span>行业运营</span>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="about">
-  <div class="container showcase reverse-mobile">
-    <div>
-      <div class="section-header">
-        <h2 style="color:#3d79b4;text-shadow:none;font-weight:800;">以“飞控 + 机体 + AI + 云”构建面向低空场景的产品与服务能力</h2>
-        <p style="color:#5c87b2;font-weight:600;">飞行魔方聚焦低空经济场景下的整机、系统和平台协同交付，围绕产品方向、应用场景与配套服务能力展开整体展示。</p>
-      </div>
-      <div class="dark-panel">
-        <p>公司具备自研自适应 PID 算法和优化的 EKF 多传感器融合算法，拥有多旋翼、直升机、固定翼、eVTOL 等构型空气动力学与结构设计经验，并通过云原生微服务平台支撑批量调度控制、实时监测、空域合规校验与高清直播。</p>
-        <ul class="feature-list">
-          <li>物流无人机：覆盖 5kg、8kg、50kg、100kg、150kg、300kg 多级运载能力</li>
-          <li>编队表演无人机：支持室内近场与室外大规模灯光编队演出</li>
-          <li>载人飞行器：面向展示、体验和试验性低空飞行场景</li>
-          <li>低空管理平台：支持飞行数据监管、任务规划、站点管理与二次开发</li>
-        </ul>
-        <div class="hero-actions">
-          <a class="btn btn-secondary" href="about.php">查看更多公司介绍</a>
-        </div>
-      </div>
-    </div>
-    <div class="photo dramatic photo-toned"><img src="assets/customer/logistics-150-2.png" alt="飞行魔方物流无人机"></div>
-  </div>
-</section>
-
-<section class="section dark-section" id="fleet">
-  <div class="container">
-    <div class="section-header centered">
-      <h2>核心产品</h2>
-      <p>从轻型物流平台到重载运输系统，从消防装备到编队与载人展示平台，形成覆盖多场景的产品组合。</p>
-    </div>
-    <div class="grid grid-3 cards-lift">
-      <?php foreach ($featured as $slug => $product): ?>
-      <article class="card product-card product-card-large">
-        <div class="product-image-wrap">
-          <img src="<?= htmlspecialchars((isset($product['card_image']) ? $product['card_image'] : $product['image'])) ?>" alt="<?= htmlspecialchars($product['name']) ?>">
-        </div>
-        <div class="card-body">
-          <div class="product-meta">
-            <span><?= htmlspecialchars($product['category']) ?></span>
-            <span>载荷 <?= htmlspecialchars($product['payload']) ?></span>
-            <span>续航 <?= htmlspecialchars($product['endurance']) ?></span>
-          </div>
-          <h3><?= htmlspecialchars($product['name']) ?></h3>
-          <p><?= htmlspecialchars($product['summary']) ?></p>
-          <ul class="feature-list compact">
-            <?php foreach (array_slice($product['features'], 0, 3) as $feature): ?>
-              <li><?= htmlspecialchars($feature) ?></li>
-            <?php endforeach; ?>
-          </ul>
-          <a class="btn btn-secondary" href="product.php?slug=<?= urlencode($slug) ?>">进入详情页</a>
-        </div>
-      </article>
-      <?php endforeach; ?>
-    </div>
-    <div class="hero-actions" style="justify-content:center;margin-top:36px">
-      <a class="btn btn-primary" href="products.php">查看全部产品</a>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="technology">
-  <div class="container">
-    <div class="section-header centered">
-      <h2>核心能力</h2>
-      <p>围绕飞控、机体、AI 与云平台，形成覆盖研发、交付与平台协同的综合能力。</p>
-    </div>
-    <div class="grid grid-3">
-      <div class="dark-panel tall-panel">
-        <h3>深耕飞控核心</h3>
-        <p>自研自适应 PID 算法和 EKF 多传感器融合算法，可用于支持多机型飞行控制与复杂场景下的任务需求。</p>
-      </div>
-      <div class="dark-panel tall-panel">
-        <h3>机载 AI 与边缘计算</h3>
-        <p>集成异构 GPU，支持视觉 SLAM、目标识别与避障，并可结合轻量模型方案用于空中识别与任务辅助决策。</p>
-      </div>
-      <div class="dark-panel tall-panel">
-        <h3>统一云端运营平台</h3>
-        <p>基于云原生微服务架构，支持批量调度控制、实时检测、空域合规校验、高清直播与开放 API，对接企业业务系统。</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section image-story">
-  <div class="container showcase">
-    <div class="photo cinematic photo-toned"><img src="assets/customer/homepage/home-story.jpg" alt="飞行魔方编队表演"></div>
-    <div class="dark-panel story-panel">
-      <h2>从整机研发，到场景交付，再到持续运营支持</h2>
-      <p>飞行魔方不仅提供单一产品，还围绕行业任务流程提供参数配置、系统平台、培训和运维支持，让无人机能力真正变成可执行的业务能力。</p>
-      <div class="timeline">
-        <div class="timeline-item"><strong>需求分析</strong><br>结合物流、消防、文旅、监管等应用场景匹配机型与任务流程。</div>
-        <div class="timeline-item"><strong>方案交付</strong><br>整机、系统、平台与实施建议同步交付，降低项目落地门槛。</div>
-        <div class="timeline-item"><strong>持续服务</strong><br>围绕运维、升级、任务优化和行业扩展进行长期支持。</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section dark-section" id="gallery">
-  <div class="container">
-    <div class="section-header centered compact-header">
-      <h2>核心影像</h2>
-      <p>围绕消防、物流、编队与载人平台保留四类核心画面，让首页结构更接近专业无人机官网的展示方式。</p>
-    </div>
-    <div class="home-media-grid">
-      <div class="media-feature media-fire photo-toned">
-        <img src="assets/customer/homepage/home-fire.jpg" alt="应急消防无人机">
-        <div class="media-caption"><strong>应急消防</strong><span>FC-F150pro 大载重消防投弹无人机场景图</span></div>
-      </div>
-      <div class="media-feature media-logistics photo-toned">
-        <img src="assets/customer/logistics-150-2.png" alt="物流无人机">
-        <div class="media-caption"><strong>物流运输</strong><span>150 公斤级物流无人机平台展示</span></div>
-      </div>
-      <div class="media-feature media-show photo-toned">
-        <img src="assets/customer/homepage/home-show.jpg" alt="编队表演无人机">
-        <div class="media-caption"><strong>编队演艺</strong><span>星幻编队无人机外场表演素材</span></div>
-      </div>
-      <div class="media-feature media-manned photo-toned">
-        <img src="assets/customer/homepage/home-manned.jpg" alt="载人飞行器">
-        <div class="media-caption"><strong>载人体验</strong><span>蛋壳飞行器展示素材</span></div>
-      </div>
-    </div>
-    <div class="media-grid media-grid-videos">
-      <div class="media-card">
-        <video controls preload="metadata">
-          <source src="assets/customer/logistics-150.mp4" type="video/mp4">
-          您的浏览器暂不支持视频播放。
-        </video>
-        <p>FC-TS150 150 公斤物流无人机视频资料</p>
-      </div>
-      <div class="media-card">
-        <video controls preload="metadata">
-          <source src="assets/customer/manned.mp4" type="video/mp4">
-          您的浏览器暂不支持视频播放。
-        </video>
-        <p>蛋壳飞行器视频资料</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section testimonials">
-  <div class="container">
-    <div class="section-header centered">
-      <h2>资质与项目经验</h2>
-      <p>集中展示公司的核心能力、项目经验与资质方向。</p>
-    </div>
-    <div class="grid grid-3">
-      <div class="card quote-card"><div class="card-body"><p>“公司拥有超 20 项专利与软著，具备从飞控、机体到整机量产的一体化研发能力。”</p><strong>— 研发与知识产权能力</strong></div></div>
-      <div class="card quote-card"><div class="card-body"><p>“团队成员来自亿航、北航、清华、北邮等背景，参与过载人 eVTOL、低空经济示范、公安应急和跨海物流等重点项目。”</p><strong>— 项目与合规经验</strong></div></div>
-      <div class="card quote-card"><div class="card-body"><p>“公司业务覆盖高新技术企业、通航企业许可、无人驾驶航空器运营许可及大型项目合作等方向。”</p><strong>— 企业资质与合作履历</strong></div></div>
-    </div>
-  </div>
-</section>
-
-
-
-<section class="section" id="contact">
-  <div class="container footer-grid">
-    <div class="contact-card emphasis">
-      <h2>联系我们</h2>
-      <p>欢迎联系北京飞行魔方科技有限公司，获取产品资料、行业方案、合作支持与部署建议。</p>
-      <p><strong>公司名称：</strong>北京飞行魔方科技有限公司</p>
-      <p><strong>联系邮箱：</strong>pxzleo@126.com</p>
-      <p><strong>公司地址：</strong>北京市昌平区史各庄街道生命科学园路北清创意园4-1楼</p>
-      <p><strong>主营方向：</strong>物流无人机、应急消防、编队表演、载人飞行器、低空飞行综合管理服务平台</p>
-    </div>
-    <div class="contact-card">
-      <h3>快速导航</h3>
-      <p><a href="about.php">公司介绍</a></p>
-      <p><a href="products.php">产品中心</a></p>
-      <p><a href="#technology">技术优势</a></p>
-      <p><a href="#gallery">影像中心</a></p>
-    </div>
-    <div class="contact-card">
-      <h3>网站内容</h3>
-      <p>公司介绍与品牌信息</p>
-      <p>产品中心与应用案例</p>
-      <p>真实图片与视频素材展示</p>
-      <p>联系方式与业务方向说明</p>
-    </div>
-  </div>
-</section>
-
-
-
-<footer class="footer" style="background:linear-gradient(180deg,rgba(8,18,30,.96),rgba(5,12,22,.98));border-top:1px solid rgba(255,255,255,.08);padding-top:32px;">
-  <div class="container footer-bottom" style="color:#eef6ff;">
-    <div style="color:#eef6ff;">© <?php echo date('Y'); ?> <?= htmlspecialchars(t('北京飞行魔方科技有限公司', 'Beijing Flicube Technology Co., Ltd.')) ?></div>
-    <div style="color:#d9ebff;">flicube.com</div>
-  </div>
-  <div class="container" style="margin-top:14px;text-align:center;font-size:14px;color:#ffffff;font-weight:700;letter-spacing:.03em;text-shadow:0 2px 10px rgba(0,0,0,.35);">
-    <?= htmlspecialchars(t('备案号：京ICP备17001976号-2', 'ICP Filing No.: 京ICP备17001976号-2')) ?>
-  </div>
-</footer>
-<script>
-(function(){
-  var btn=document.querySelector('.mobile-menu-toggle');
-  var panel=document.getElementById('mobile-menu-panel');
-  if(!btn||!panel) return;
-  btn.addEventListener('click',function(){
-    var open=panel.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    btn.textContent=open ? '✕' : '☰';
-  });
-})();
-</script>
-</body>
-</html>
+<section class="section section-tight hero-stats-wrap"><div class="container"><div class="hero-intro-panel"><div class="hero-intro-copy"><strong><?= htmlspecialchars(t('物流无人机','Logistics Drones')) ?></strong><span><?= htmlspecialchars(t('覆盖 5kg 至 300kg 多级运载能力','Payload coverage from 5 kg to 300 kg')) ?></span></div><div class="hero-intro-copy"><strong><?= htmlspecialchars(t('应急消防','Emergency Firefighting')) ?></strong><span><?= htmlspecialchars(t('150kg 大载重消防投弹无人机平台','150 kg heavy-lift firefighting bombing drone platform')) ?></span></div><div class="hero-intro-copy"><strong><?= htmlspecialchars(t('编队与载人','Drone Shows and Manned Aircraft')) ?></strong><span><?= htmlspecialchars(t('室外编队、室内编队与轻型载人展示平台','Outdoor shows, indoor shows and light manned display platform')) ?></span></div></div><div class="hero-stats-grid"><div class="metric"><div><strong>2016</strong><span><?= htmlspecialchars(t('公司成立时间','Founded')) ?></span></div></div><div class="metric"><div><strong>5kg-300kg</strong><span><?= htmlspecialchars(t('物流无人机载重覆盖','Logistics payload coverage')) ?></span></div></div><div class="metric"><div><strong>20+</strong><span><?= htmlspecialchars(t('专利与软著','Patents and software copyrights')) ?></span></div></div><div class="metric"><div><strong><?= htmlspecialchars(t('飞控+机体+AI+云','Flight Control + Airframe + AI + Cloud')) ?></strong><span><?= htmlspecialchars(t('一体化研发能力','Integrated R&D capability')) ?></span></div></div></div><div class="logo-strip" style="margin-top:18px;"><span><?= htmlspecialchars(t('智慧物流','Smart Logistics')) ?></span><span><?= htmlspecialchars(t('应急消防','Emergency Firefighting')) ?></span><span><?= htmlspecialchars(t('文旅演艺','Culture & Performance')) ?></span><span><?= htmlspecialchars(t('载人体验','Manned Experience')) ?></span><span><?= htmlspecialchars(t('低空监管','Low-Altitude Supervision')) ?></span><span><?= htmlspecialchars(t('行业运营','Industry Operations')) ?></span></div></div></section>
+<section class="section" id="about"><div class="container showcase reverse-mobile"><div><div class="section-header"><h2 style="color:#3d79b4;text-shadow:none;font-weight:800;"><?= htmlspecialchars(t('以“飞控 + 机体 + AI + 云”构建面向低空场景的产品与服务能力', 'Building product and service capabilities for low-altitude scenarios through “flight control + airframe + AI + cloud”')) ?></h2><p style="color:#5c87b2;font-weight:600;"><?= htmlspecialchars(t('飞行魔方聚焦低空经济场景下的整机、系统和平台协同交付，围绕产品方向、应用场景与配套服务能力展开整体展示。', 'Flicube focuses on coordinated delivery of aircraft, systems and platforms for the low-altitude economy, showcasing product directions, application scenarios and supporting service capability.')) ?></p></div><div class="dark-panel"><p><?= htmlspecialchars(t('公司具备自研自适应 PID 算法和优化的 EKF 多传感器融合算法，拥有多旋翼、直升机、固定翼、eVTOL 等构型空气动力学与结构设计经验，并通过云原生微服务平台支撑批量调度控制、实时监测、空域合规校验与高清直播。', 'The company has in-house adaptive PID and optimized EKF multi-sensor fusion algorithms, along with aerodynamic and structural design experience across multirotor, helicopter, fixed-wing and eVTOL configurations. A cloud-native microservice platform supports fleet dispatch, real-time monitoring, airspace compliance and HD streaming.')) ?></p><ul class="feature-list"><li><?= htmlspecialchars(t('物流无人机：覆盖 5kg、8kg、50kg、100kg、150kg、300kg 多级运载能力','Logistics drones: covering 5 kg, 8 kg, 50 kg, 100 kg, 150 kg and 300 kg payload classes')) ?></li><li><?= htmlspecialchars(t('编队表演无人机：支持室内近场与室外大规模灯光编队演出','Drone show platforms: supporting indoor close-range shows and large-scale outdoor light formations')) ?></li><li><?= htmlspecialchars(t('载人飞行器：面向展示、体验和试验性低空飞行场景','Manned aircraft: for display, experience and trial low-altitude scenarios')) ?></li><li><?= htmlspecialchars(t('低空管理平台：支持飞行数据监管、任务规划、站点管理与二次开发','Low-altitude platform: supporting flight data supervision, mission planning, station management and secondary development')) ?></li></ul><div class="hero-actions"><a class="btn btn-secondary" href="<?= url_with_lang('about.php') ?>"><?= htmlspecialchars(t('查看更多公司介绍', 'Learn More About the Company')) ?></a></div></div></div><div class="photo dramatic photo-toned"><img src="assets/customer/logistics-150-2.png" alt="<?= htmlspecialchars(t('飞行魔方物流无人机', 'Flicube logistics drone')) ?>"></div></div></section>
+<section class="section dark-section" id="fleet"><div class="container"><div class="section-header centered"><h2><?= htmlspecialchars(t('核心产品', 'Core Products')) ?></h2><p><?= htmlspecialchars(t('从轻型物流平台到重载运输系统，从消防装备到编队与载人展示平台，形成覆盖多场景的产品组合。', 'From light logistics platforms to heavy transport systems, and from firefighting equipment to drone show and manned display platforms, the portfolio covers a wide range of scenarios.')) ?></p></div><div class="grid grid-3 cards-lift"><?php foreach ($featured as $slug => $product): ?><article class="card product-card product-card-large"><div class="product-image-wrap"><img src="<?= htmlspecialchars((isset($product['card_image']) ? $product['card_image'] : $product['image'])) ?>" alt="<?= htmlspecialchars(localized($product['name'])) ?>"></div><div class="card-body"><div class="product-meta"><span><?= htmlspecialchars(localized($product['category'])) ?></span><span><?= htmlspecialchars(t('载荷 ', 'Payload ')) . htmlspecialchars(localized($product['payload'])) ?></span><span><?= htmlspecialchars(t('续航 ', 'Endurance ')) . htmlspecialchars(localized($product['endurance'])) ?></span></div><h3><?= htmlspecialchars(localized($product['name'])) ?></h3><p><?= htmlspecialchars(localized($product['summary'])) ?></p><ul class="feature-list compact"><?php foreach (array_slice($product['features'], 0, 3) as $feature): ?><li><?= htmlspecialchars(localized($feature)) ?></li><?php endforeach; ?></ul><a class="btn btn-secondary" href="<?= url_with_lang('product.php', ['slug'=>$slug]) ?>"><?= htmlspecialchars(t('进入详情页', 'View Details')) ?></a></div></article><?php endforeach; ?></div><div class="hero-actions" style="justify-content:center;margin-top:36px"><a class="btn btn-primary" href="<?= url_with_lang('products.php') ?>"><?= htmlspecialchars(t('查看全部产品', 'View All Products')) ?></a></div></div></section>
+<section class="section" id="technology"><div class="container"><div class="section-header centered"><h2><?= htmlspecialchars(t('核心能力', 'Core Capabilities')) ?></h2><p><?= htmlspecialchars(t('围绕飞控、机体、AI 与云平台，形成覆盖研发、交付与平台协同的综合能力。', 'Built around flight control, airframes, AI and cloud platforms, these capabilities span R&D, delivery and platform coordination.')) ?></p></div><div class="grid grid-3"><div class="dark-panel tall-panel"><h3><?= htmlspecialchars(t('深耕飞控核心', 'Deep Flight Control Expertise')) ?></h3><p><?= htmlspecialchars(t('自研自适应 PID 算法和 EKF 多传感器融合算法，可用于支持多机型飞行控制与复杂场景下的任务需求。', 'In-house adaptive PID and EKF multi-sensor fusion algorithms support multi-aircraft flight control and complex mission requirements.')) ?></p></div><div class="dark-panel tall-panel"><h3><?= htmlspecialchars(t('机载 AI 与边缘计算', 'Onboard AI and Edge Computing')) ?></h3><p><?= htmlspecialchars(t('集成异构 GPU，支持视觉 SLAM、目标识别与避障，并可结合轻量模型方案用于空中识别与任务辅助决策。', 'Integrated heterogeneous GPUs support visual SLAM, target recognition and obstacle avoidance, with lightweight models available for airborne perception and mission assistance.')) ?></p></div><div class="dark-panel tall-panel"><h3><?= htmlspecialchars(t('统一云端运营平台', 'Unified Cloud Operations Platform')) ?></h3><p><?= htmlspecialchars(t('基于云原生微服务架构，支持批量调度控制、实时检测、空域合规校验、高清直播与开放 API，对接企业业务系统。', 'Built on a cloud-native microservice architecture, it supports fleet dispatch, real-time monitoring, airspace compliance, HD live streaming and open APIs for enterprise system integration.')) ?></p></div></div></div></section>
+<section class="section image-story"><div class="container showcase"><div class="photo cinematic photo-toned"><img src="assets/customer/homepage/home-story.jpg" alt="<?= htmlspecialchars(t('飞行魔方编队表演', 'Flicube drone show')) ?>"></div><div class="dark-panel story-panel"><h2><?= htmlspecialchars(t('从整机研发，到场景交付，再到持续运营支持', 'From aircraft development to scenario delivery to ongoing operational support')) ?></h2><p><?= htmlspecialchars(t('飞行魔方不仅提供单一产品，还围绕行业任务流程提供参数配置、系统平台、培训和运维支持，让无人机能力真正变成可执行的业务能力。', 'Flicube does more than provide standalone products. It supports complete operational workflows with configuration, system platforms, training and maintenance, turning drone capability into real business execution.')) ?></p><div class="timeline"><div class="timeline-item"><strong><?= htmlspecialchars(t('需求分析', 'Requirements Analysis')) ?></strong><br><?= htmlspecialchars(t('结合物流、消防、文旅、监管等应用场景匹配机型与任务流程。', 'Match aircraft types and mission processes to logistics, firefighting, cultural tourism and supervision scenarios.')) ?></div><div class="timeline-item"><strong><?= htmlspecialchars(t('方案交付', 'Solution Delivery')) ?></strong><br><?= htmlspecialchars(t('整机、系统、平台与实施建议同步交付，降低项目落地门槛。', 'Deliver aircraft, systems, platforms and implementation guidance together to reduce deployment barriers.')) ?></div><div class="timeline-item"><strong><?= htmlspecialchars(t('持续服务', 'Ongoing Service')) ?></strong><br><?= htmlspecialchars(t('围绕运维、升级、任务优化和行业扩展进行长期支持。', 'Provide long-term support around maintenance, upgrades, mission optimization and industry expansion.')) ?></div></div></div></div></section>
+<section class="section dark-section" id="gallery"><div class="container"><div class="section-header centered compact-header"><h2><?= htmlspecialchars(t('核心影像', 'Key Visuals')) ?></h2><p><?= htmlspecialchars(t('围绕消防、物流、编队与载人平台保留四类核心画面，让首页结构更接近专业无人机官网的展示方式。', 'The homepage retains four key visual categories around firefighting, logistics, drone shows and manned platforms for a more professional aviation-industry presentation.')) ?></p></div><div class="home-media-grid"><div class="media-feature media-fire photo-toned"><img src="assets/customer/homepage/home-fire.jpg" alt="<?= htmlspecialchars(t('应急消防无人机', 'Emergency firefighting drone')) ?>"><div class="media-caption"><strong><?= htmlspecialchars(t('应急消防', 'Emergency Firefighting')) ?></strong><span><?= htmlspecialchars(t('FC-F150pro 大载重消防投弹无人机场景图', 'FC-F150pro heavy-lift firefighting drone in scenario')) ?></span></div></div><div class="media-feature media-logistics photo-toned"><img src="assets/customer/logistics-150-2.png" alt="<?= htmlspecialchars(t('物流无人机', 'Logistics drone')) ?>"><div class="media-caption"><strong><?= htmlspecialchars(t('物流运输', 'Logistics Transport')) ?></strong><span><?= htmlspecialchars(t('150 公斤级物流无人机平台展示', '150 kg logistics drone platform')) ?></span></div></div><div class="media-feature media-show photo-toned"><img src="assets/customer/homepage/home-show.jpg" alt="<?= htmlspecialchars(t('编队表演无人机', 'Drone show platform')) ?>"><div class="media-caption"><strong><?= htmlspecialchars(t('编队演艺', 'Drone Show Performance')) ?></strong><span><?= htmlspecialchars(t('星幻编队无人机外场表演素材', 'StarMagic outdoor drone show footage')) ?></span></div></div><div class="media-feature media-manned photo-toned"><img src="assets/customer/homepage/home-manned.jpg" alt="<?= htmlspecialchars(t('载人飞行器', 'Manned aircraft')) ?>"><div class="media-caption"><strong><?= htmlspecialchars(t('载人体验', 'Manned Experience')) ?></strong><span><?= htmlspecialchars(t('蛋壳飞行器展示素材', 'Eggcraft display media')) ?></span></div></div></div><div class="media-grid media-grid-videos"><div class="media-card"><video controls preload="metadata"><source src="assets/customer/logistics-150.mp4" type="video/mp4"><?= htmlspecialchars(t('您的浏览器暂不支持视频播放。', 'Your browser does not support video playback.')) ?></video><p><?= htmlspecialchars(t('FC-TS150 150 公斤物流无人机视频资料', 'FC-TS150 150 kg logistics drone video')) ?></p></div><div class="media-card"><video controls preload="metadata"><source src="assets/customer/manned.mp4" type="video/mp4"><?= htmlspecialchars(t('您的浏览器暂不支持视频播放。', 'Your browser does not support video playback.')) ?></video><p><?= htmlspecialchars(t('蛋壳飞行器视频资料', 'Eggcraft video')) ?></p></div></div></div></section>
+<section class="section testimonials"><div class="container"><div class="section-header centered"><h2><?= htmlspecialchars(t('资质与项目经验', 'Qualifications and Project Experience')) ?></h2><p><?= htmlspecialchars(t('集中展示公司的核心能力、项目经验与资质方向。', 'A concise overview of the company’s core strengths, project experience and qualifications.')) ?></p></div><div class="grid grid-3"><div class="card quote-card"><div class="card-body"><p><?= htmlspecialchars(t('“公司拥有超 20 项专利与软著，具备从飞控、机体到整机量产的一体化研发能力。”', '“The company holds more than 20 patents and software copyrights, with integrated capability from flight control and airframes to full aircraft production.”')) ?></p><strong><?= htmlspecialchars(t('— 研发与知识产权能力', '— R&D and IP Capability')) ?></strong></div></div><div class="card quote-card"><div class="card-body"><p><?= htmlspecialchars(t('“团队成员来自亿航、北航、清华、北邮等背景，参与过载人 eVTOL、低空经济示范、公安应急和跨海物流等重点项目。”', '“Team members come from backgrounds including EHang, Beihang, Tsinghua and BUPT, and have worked on manned eVTOL, low-altitude pilots, public safety response and cross-sea logistics projects.”')) ?></p><strong><?= htmlspecialchars(t('— 项目与合规经验', '— Projects and Compliance Experience')) ?></strong></div></div><div class="card quote-card"><div class="card-body"><p><?= htmlspecialchars(t('“公司业务覆盖高新技术企业、通航企业许可、无人驾驶航空器运营许可及大型项目合作等方向。”', '“The company’s business scope includes high-tech enterprise qualification, general aviation licensing, UAV operation licensing and major project cooperation.”')) ?></p><strong><?= htmlspecialchars(t('— 企业资质与合作履历', '— Corporate Qualifications and Partnerships')) ?></strong></div></div></div></div></section>
+<section class="section" id="contact"><div class="container footer-grid"><div class="contact-card emphasis"><h2><?= htmlspecialchars(t('联系我们', 'Contact Us')) ?></h2><p><?= htmlspecialchars(t('欢迎联系北京飞行魔方科技有限公司，获取产品资料、行业方案、合作支持与部署建议。', 'Contact Beijing Flicube Technology for product brochures, industry solutions, partnership support and deployment advice.')) ?></p><p><strong><?= htmlspecialchars(t('公司名称：', 'Company: ')) ?></strong><?= htmlspecialchars(t('北京飞行魔方科技有限公司', 'Beijing Flicube Technology Co., Ltd.')) ?></p><p><strong><?= htmlspecialchars(t('联系邮箱：', 'Email: ')) ?></strong>pxzleo@126.com</p><p><strong><?= htmlspecialchars(t('公司地址：', 'Address: ')) ?></strong><?= htmlspecialchars(t('北京市昌平区史各庄街道生命科学园路北清创意园4-1楼', '4-1, Beiqing Creative Park, Life Science Park Road, Shigezhuang Subdistrict, Changping District, Beijing')) ?></p><p><strong><?= htmlspecialchars(t('主营方向：', 'Business Focus: ')) ?></strong><?= htmlspecialchars(t('物流无人机、应急消防、编队表演、载人飞行器、低空飞行综合管理服务平台', 'Logistics drones, emergency firefighting, drone shows, manned aircraft and integrated low-altitude management platforms')) ?></p></div><div class="contact-card"><h3><?= htmlspecialchars(t('快速导航', 'Quick Links')) ?></h3><p><a href="<?= url_with_lang('about.php') ?>"><?= htmlspecialchars(t('公司介绍', 'About')) ?></a></p><p><a href="<?= url_with_lang('products.php') ?>"><?= htmlspecialchars(t('产品中心', 'Products')) ?></a></p><p><a href="#technology"><?= htmlspecialchars(t('技术优势', 'Technology')) ?></a></p><p><a href="#gallery"><?= htmlspecialchars(t('影像中心', 'Media')) ?></a></p></div><div class="contact-card"><h3><?= htmlspecialchars(t('网站内容', 'Site Content')) ?></h3><p><?= htmlspecialchars(t('公司介绍与品牌信息', 'Company profile and brand information')) ?></p><p><?= htmlspecialchars(t('产品中心与应用案例', 'Products and case studies')) ?></p><p><?= htmlspecialchars(t('真实图片与视频素材展示', 'Real images and video materials')) ?></p><p><?= htmlspecialchars(t('联系方式与业务方向说明', 'Contact details and business scope')) ?></p></div></div></section>
+<footer class="footer" style="background:linear-gradient(180deg,rgba(8,18,30,.96),rgba(5,12,22,.98));border-top:1px solid rgba(255,255,255,.08);padding-top:32px;"><div class="container footer-bottom" style="color:#eef6ff;"><div style="color:#eef6ff;">© <?php echo date('Y'); ?> <?= htmlspecialchars(t('北京飞行魔方科技有限公司', 'Beijing Flicube Technology Co., Ltd.')) ?></div><div style="color:#d9ebff;">flicube.com</div></div><div class="container" style="margin-top:14px;text-align:center;font-size:14px;color:#ffffff;font-weight:700;letter-spacing:.03em;text-shadow:0 2px 10px rgba(0,0,0,.35);"><?= htmlspecialchars(t('备案号：京ICP备17001976号-2', 'ICP Filing No.: 京ICP备17001976号-2')) ?></div></footer>
+<script>(function(){var btn=document.querySelector('.mobile-menu-toggle');var panel=document.getElementById('mobile-menu-panel');if(!btn||!panel) return;btn.addEventListener('click',function(){var open=panel.classList.toggle('open');btn.setAttribute('aria-expanded', open ? 'true' : 'false');btn.textContent=open ? '✕' : '☰';});})();</script>
+</body></html>

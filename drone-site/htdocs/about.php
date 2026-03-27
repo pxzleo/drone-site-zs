@@ -1,104 +1,13 @@
 <?php require __DIR__ . '/i18n.php'; ?>
 <!doctype html>
 <html lang="<?= $lang === 'zh' ? 'zh-CN' : 'en' ?>">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?= htmlspecialchars(t('公司介绍 | 北京飞行魔方科技有限公司', 'About | Beijing Flicube Technology')) ?></title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title><?= htmlspecialchars(t('公司介绍 | 北京飞行魔方科技有限公司', 'About | Beijing Flicube Technology')) ?></title><link rel="stylesheet" href="assets/css/style.css"></head>
 <body>
 <?php render_header(); ?>
-  <div class="container nav">
-    <a class="brand brand-logo" href="index.php"><img src="assets/customer/logo.png" alt="飞行魔方 Logo"></a>
-    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="打开导航菜单">☰</button>
-    <nav class="menu">
-      <a href="index.php">首页</a>
-      <a href="about.php">公司介绍</a>
-      <a href="products.php">产品中心</a>
-      <a href="cases.php">应用案例</a>
-      <a href="news.php">新闻资讯</a>
-      <a href="contact.php" class="cta">联系我们</a>
-    </nav>
-  </div>
-  <div class="container mobile-nav-wrap" id="mobile-menu-panel">
-    <nav class="mobile-menu">
-      <a href="about.php">公司介绍</a>
-      <a href="products.php">产品中心</a>
-      <a href="cases.php">应用案例</a>
-      <a href="news.php">新闻资讯</a>
-      <a href="contact.php">联系我们</a>
-    </nav>
-  </div>
-</header>
-
-<section class="page-hero">
-  <div class="container">
-    <div class="breadcrumb"><a href="<?= url_with_lang('index.php') ?>"><?= htmlspecialchars(t('首页', 'Home')) ?></a> / <?= htmlspecialchars(t('公司介绍', 'About')) ?></div>
-    <div class="section-header">
-      <h1>北京飞行魔方科技：以自主研发为核心的低空经济产品企业</h1>
-      <p>北京飞行魔方科技成立于 2016 年，团队由清华、北航技术骨干及前亿航高管组成，具备飞控、机体、整机量产与系统平台的一体化研发能力。</p>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container showcase">
-    <div class="dark-panel">
-      <h2>公司概况</h2>
-      <p>北京飞行魔方科技有限公司是一家以自主研发为核心的无人机企业，产品覆盖行业 / 物流无人机、编队表演、小型载人飞行器以及无人机监管平台等方向，可为低空经济场景提供交付与运维服务。</p>
-      <p>公司围绕“飞控 + 机体 + AI + 云”形成一体化方案，覆盖整机产品、任务系统、飞行平台与云端调度等环节，网站内容主要用于展示现有产品方向与技术能力。</p>
-    </div>
-    <div class="photo dramatic"><img src="assets/customer/manned-hero.png" alt="飞行魔方载人飞行器"></div>
-  </div>
-</section>
-
-<section class="section dark-section">
-  <div class="container grid grid-3">
-    <div class="dark-panel tall-panel"><h3>飞控与算法</h3><p>自研自适应 PID 算法与 EKF 多传感器融合算法，可用于支持多类型飞行器在复杂场景下的飞行控制需求。</p></div>
-    <div class="dark-panel tall-panel"><h3>机体与结构</h3><p>拥有多旋翼、直升机、固定翼、eVTOL 等构型空气动力学、结构轻量化与复合材料成型经验，可在续航、航速与载荷之间做平衡优化。</p></div>
-    <div class="dark-panel tall-panel"><h3>AI 与云平台</h3><p>支持视觉 SLAM、目标识别与避障，并通过统一云端运营平台实现批量调度控制、实时检测、空域合规校验与高清直播。</p></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-header centered">
-      <h2>能力与资质</h2>
-      <p>展示公司在自主研发、产品布局、项目经验与资质方向方面的核心情况。</p>
-    </div>
-    <div class="media-grid" style="margin-bottom:28px;">
-      <div class="media-card"><img src="assets/customer/manned-p.png" alt="飞行魔方载人飞行器细节图"><p>载人飞行器细节图</p></div>
-      <div class="media-card"><img src="assets/customer/manned-t.png" alt="飞行魔方载人飞行器展示图"><p>载人飞行器展示图</p></div>
-    </div>
-    <div class="timeline">
-      <div class="timeline-item"><strong>自主研发能力</strong><br>覆盖飞控、机体、AI、云平台和多机型整机设计，具备研产一体能力。</div>
-      <div class="timeline-item"><strong>产品覆盖广</strong><br>布局物流无人机、应急消防、编队表演、载人飞行器和低空管理服务平台。</div>
-      <div class="timeline-item"><strong>项目经验</strong><br>团队参与成熟载人 eVTOL、国家低空经济示范、公安应急与跨海物流等重点项目。</div>
-      <div class="timeline-item"><strong>资质方向</strong><br>覆盖专利与软著、高新技术企业、通航企业许可、无人驾驶航空器运营许可及大型项目合作等方向。</div>
-    </div>
-  </div>
-</section>
-
-
-
-<footer class="footer">
-  <div class="container footer-bottom">
-    <div>© <?php echo date('Y'); ?> 北京飞行魔方科技有限公司</div>
-    <div>公司介绍页 · flicube.com</div>
-  </div>
-</footer>
-<script>
-(function(){
-  var btn=document.querySelector('.mobile-menu-toggle');
-  var panel=document.getElementById('mobile-menu-panel');
-  if(!btn||!panel) return;
-  btn.addEventListener('click',function(){
-    var open=panel.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    btn.textContent=open ? '✕' : '☰';
-  });
-})();
-</script>
-</body>
-</html>
+<section class="page-hero"><div class="container"><div class="breadcrumb"><a href="<?= url_with_lang('index.php') ?>"><?= htmlspecialchars(t('首页', 'Home')) ?></a> / <?= htmlspecialchars(t('公司介绍', 'About')) ?></div><div class="section-header"><h1><?= htmlspecialchars(t('北京飞行魔方科技：以自主研发为核心的低空经济产品企业', 'Beijing Flicube Technology: A Low-Altitude Product Company Built on In-House R&D')) ?></h1><p><?= htmlspecialchars(t('北京飞行魔方科技成立于 2016 年，团队由清华、北航技术骨干及前亿航高管组成，具备飞控、机体、整机量产与系统平台的一体化研发能力。', 'Founded in 2016, Beijing Flicube Technology is backed by technical talent from Tsinghua University, Beihang University and former EHang executives, with integrated R&D capability spanning flight control, airframes, aircraft production and system platforms.')) ?></p></div></div></section>
+<section class="section"><div class="container showcase"><div class="dark-panel"><h2><?= htmlspecialchars(t('公司概况', 'Company Overview')) ?></h2><p><?= htmlspecialchars(t('北京飞行魔方科技有限公司是一家以自主研发为核心的无人机企业，产品覆盖行业 / 物流无人机、编队表演、小型载人飞行器以及无人机监管平台等方向，可为低空经济场景提供交付与运维服务。', 'Beijing Flicube Technology is a UAV company driven by in-house R&D. Its products cover industrial and logistics drones, drone show systems, light manned aircraft and UAV management platforms, with delivery and operational support for low-altitude economy scenarios.')) ?></p><p><?= htmlspecialchars(t('公司围绕“飞控 + 机体 + AI + 云”形成一体化方案，覆盖整机产品、任务系统、飞行平台与云端调度等环节，网站内容主要用于展示现有产品方向与技术能力。', 'The company builds integrated solutions around “flight control + airframe + AI + cloud,” covering aircraft products, mission systems, flight platforms and cloud dispatching. This website presents current product directions and technical capabilities.')) ?></p></div><div class="photo dramatic"><img src="assets/customer/manned-hero.png" alt="<?= htmlspecialchars(t('飞行魔方载人飞行器', 'Flicube manned aircraft')) ?>"></div></div></section>
+<section class="section dark-section"><div class="container grid grid-3"><div class="dark-panel tall-panel"><h3><?= htmlspecialchars(t('飞控与算法', 'Flight Control and Algorithms')) ?></h3><p><?= htmlspecialchars(t('自研自适应 PID 算法与 EKF 多传感器融合算法，可用于支持多类型飞行器在复杂场景下的飞行控制需求。', 'In-house adaptive PID and EKF multi-sensor fusion algorithms support flight control requirements for various aircraft in complex scenarios.')) ?></p></div><div class="dark-panel tall-panel"><h3><?= htmlspecialchars(t('机体与结构', 'Airframe and Structures')) ?></h3><p><?= htmlspecialchars(t('拥有多旋翼、直升机、固定翼、eVTOL 等构型空气动力学、结构轻量化与复合材料成型经验，可在续航、航速与载荷之间做平衡优化。', 'The team has aerodynamic, lightweight structural and composite manufacturing experience across multirotor, helicopter, fixed-wing and eVTOL configurations, balancing endurance, speed and payload.')) ?></p></div><div class="dark-panel tall-panel"><h3><?= htmlspecialchars(t('AI 与云平台', 'AI and Cloud Platform')) ?></h3><p><?= htmlspecialchars(t('支持视觉 SLAM、目标识别与避障，并通过统一云端运营平台实现批量调度控制、实时检测、空域合规校验与高清直播。', 'Capabilities include visual SLAM, target recognition and obstacle avoidance, combined with a unified cloud platform for fleet dispatch, real-time monitoring, airspace compliance and HD streaming.')) ?></p></div></div></section>
+<section class="section"><div class="container"><div class="section-header centered"><h2><?= htmlspecialchars(t('能力与资质', 'Capabilities and Qualifications')) ?></h2><p><?= htmlspecialchars(t('展示公司在自主研发、产品布局、项目经验与资质方向方面的核心情况。', 'An overview of the company’s core strengths in R&D, product portfolio, project experience and qualifications.')) ?></p></div><div class="media-grid" style="margin-bottom:28px;"><div class="media-card"><img src="assets/customer/manned-p.png" alt="<?= htmlspecialchars(t('载人飞行器细节图', 'Manned aircraft detail')) ?>"><p><?= htmlspecialchars(t('载人飞行器细节图', 'Manned aircraft detail')) ?></p></div><div class="media-card"><img src="assets/customer/manned-t.png" alt="<?= htmlspecialchars(t('载人飞行器展示图', 'Manned aircraft display')) ?>"><p><?= htmlspecialchars(t('载人飞行器展示图', 'Manned aircraft display')) ?></p></div></div><div class="timeline"><div class="timeline-item"><strong><?= htmlspecialchars(t('自主研发能力', 'In-House R&D')) ?></strong><br><?= htmlspecialchars(t('覆盖飞控、机体、AI、云平台和多机型整机设计，具备研产一体能力。', 'Covering flight control, airframes, AI, cloud platforms and full-aircraft design across multiple types, with integrated R&D and production capability.')) ?></div><div class="timeline-item"><strong><?= htmlspecialchars(t('产品覆盖广', 'Broad Product Coverage')) ?></strong><br><?= htmlspecialchars(t('布局物流无人机、应急消防、编队表演、载人飞行器和低空管理服务平台。', 'Spanning logistics drones, emergency firefighting, drone shows, manned aircraft and low-altitude management platforms.')) ?></div><div class="timeline-item"><strong><?= htmlspecialchars(t('项目经验', 'Project Experience')) ?></strong><br><?= htmlspecialchars(t('团队参与成熟载人 eVTOL、国家低空经济示范、公安应急与跨海物流等重点项目。', 'The team has participated in mature manned eVTOL projects, national low-altitude economy pilots, police emergency programs and cross-sea logistics projects.')) ?></div><div class="timeline-item"><strong><?= htmlspecialchars(t('资质方向', 'Qualifications')) ?></strong><br><?= htmlspecialchars(t('覆盖专利与软著、高新技术企业、通航企业许可、无人驾驶航空器运营许可及大型项目合作等方向。', 'Covering patents and software rights, high-tech enterprise status, general aviation licensing, UAV operation licensing and major project cooperation.')) ?></div></div></div></section>
+<footer class="footer"><div class="container footer-bottom"><div>© <?php echo date('Y'); ?> <?= htmlspecialchars(t('北京飞行魔方科技有限公司', 'Beijing Flicube Technology Co., Ltd.')) ?></div><div><?= htmlspecialchars(t('公司介绍页 · flicube.com', 'About Page · flicube.com')) ?></div></div></footer>
+<script>(function(){var btn=document.querySelector('.mobile-menu-toggle');var panel=document.getElementById('mobile-menu-panel');if(!btn||!panel) return;btn.addEventListener('click',function(){var open=panel.classList.toggle('open');btn.setAttribute('aria-expanded', open ? 'true' : 'false');btn.textContent=open ? '✕' : '☰';});})();</script>
+</body></html>

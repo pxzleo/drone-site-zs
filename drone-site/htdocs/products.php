@@ -10,35 +10,12 @@
 </head>
 <body>
 <?php render_header(); ?>
-  <div class="container nav">
-    <a class="brand brand-logo" href="index.php"><img src="assets/customer/logo.png" alt="飞行魔方 Logo"></a>
-    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="打开导航菜单">☰</button>
-    <nav class="menu">
-      <a href="index.php">首页</a>
-      <a href="about.php">公司介绍</a>
-      <a href="products.php">产品中心</a>
-      <a href="cases.php">应用案例</a>
-      <a href="news.php">新闻资讯</a>
-      <a href="contact.php" class="cta">联系我们</a>
-    </nav>
-  </div>
-  <div class="container mobile-nav-wrap" id="mobile-menu-panel">
-    <nav class="mobile-menu">
-      <a href="about.php">公司介绍</a>
-      <a href="products.php">产品中心</a>
-      <a href="cases.php">应用案例</a>
-      <a href="news.php">新闻资讯</a>
-      <a href="contact.php">联系我们</a>
-    </nav>
-  </div>
-</header>
-
 <section class="page-hero">
   <div class="container">
     <div class="breadcrumb"><a href="<?= url_with_lang('index.php') ?>"><?= htmlspecialchars(t('首页', 'Home')) ?></a> / <?= htmlspecialchars(t('产品中心', 'Products')) ?></div>
     <div class="section-header">
-      <h1>物流、消防、编队、载人飞行器与低空管理平台产品矩阵</h1>
-      <p>围绕物流、消防、编队、载人飞行器与低空管理平台等方向，集中展示公司主要产品与相关页面内容。</p>
+      <h1><?= htmlspecialchars(t('物流、消防、编队、载人飞行器与低空管理平台产品矩阵', 'Product portfolio covering logistics, firefighting, drone shows, manned aircraft and low-altitude management platforms')) ?></h1>
+      <p><?= htmlspecialchars(t('围绕物流、消防、编队、载人飞行器与低空管理平台等方向，集中展示公司主要产品与相关页面内容。', 'This page presents the company’s major products and related content across logistics, firefighting, drone performance, manned aircraft and low-altitude management platforms.')) ?></p>
     </div>
   </div>
 </section>
@@ -49,17 +26,17 @@
       <article class="card product-card product-card-large">
         <a href="<?= url_with_lang('product.php', ['slug' => $slug]) ?>" style="display:block;color:inherit;text-decoration:none;">
           <div class="product-image-wrap">
-            <img src="<?= htmlspecialchars((isset($product['card_image']) ? $product['card_image'] : $product['image'])) ?>" alt="<?= htmlspecialchars($product['name']) ?>">
+            <img src="<?= htmlspecialchars((isset($product['card_image']) ? $product['card_image'] : $product['image'])) ?>" alt="<?= htmlspecialchars(localized($product['name'])) ?>">
           </div>
           <div class="card-body">
             <div class="product-meta">
-              <span><?= htmlspecialchars($product['category']) ?></span>
-              <span><?= htmlspecialchars($product['payload']) ?></span>
-              <span><?= htmlspecialchars($product['endurance']) ?></span>
+              <span><?= htmlspecialchars(localized($product['category'])) ?></span>
+              <span><?= htmlspecialchars(localized($product['payload'])) ?></span>
+              <span><?= htmlspecialchars(localized($product['endurance'])) ?></span>
             </div>
-            <h3><?= htmlspecialchars($product['name']) ?></h3>
-            <p><?= htmlspecialchars($product['summary']) ?></p>
-            <span class="btn btn-secondary">查看详情</span>
+            <h3><?= htmlspecialchars(localized($product['name'])) ?></h3>
+            <p><?= htmlspecialchars(localized($product['summary'])) ?></p>
+            <span class="btn btn-secondary"><?= htmlspecialchars(t('查看详情', 'View Details')) ?></span>
           </div>
         </a>
       </article>
@@ -67,12 +44,10 @@
   </div>
 </section>
 
-
-
 <footer class="footer">
   <div class="container footer-bottom">
-    <div>© <?php echo date('Y'); ?> 北京飞行魔方科技有限公司</div>
-    <div>产品中心页</div>
+    <div>© <?php echo date('Y'); ?> <?= htmlspecialchars(t('北京飞行魔方科技有限公司', 'Beijing Flicube Technology Co., Ltd.')) ?></div>
+    <div><?= htmlspecialchars(t('产品中心页', 'Products Page')) ?></div>
   </div>
 </footer>
 <script>
