@@ -63,7 +63,6 @@
 <section class="section">
   <div class="container">
     <div class="section-header centered">
-      <span class="eyebrow">能力与资质</span>
       <h2>能力与资质</h2>
       <p>根据资料整理出的公司能力重点与代表性履历。</p>
     </div>
