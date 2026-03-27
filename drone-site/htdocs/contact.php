@@ -1,13 +1,14 @@
+<?php require __DIR__ . '/i18n.php'; ?>
 <!doctype html>
-<html lang="zh-CN">
+<html lang="<?= $lang === 'zh' ? 'zh-CN' : 'en' ?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>联系我们 | 北京飞行魔方科技有限公司</title>
+  <title><?= htmlspecialchars(t('联系我们 | 北京飞行魔方科技有限公司', 'Contact | Beijing Flicube Technology')) ?></title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header class="site-header">
+<?php render_header(); ?>
   <div class="container nav">
     <a class="brand brand-logo" href="index.php"><img src="assets/customer/logo.png" alt="飞行魔方 Logo"></a>
     <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="打开导航菜单">☰</button>

@@ -23,8 +23,9 @@ $productToCases = [
 ];
 $relatedCases = isset($productToCases[$slug]) ? $productToCases[$slug] : array();
 ?>
+<?php require __DIR__ . '/i18n.php'; ?>
 <!doctype html>
-<html lang="zh-CN">
+<html lang="<?= $lang === 'zh' ? 'zh-CN' : 'en' ?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -32,7 +33,7 @@ $relatedCases = isset($productToCases[$slug]) ? $productToCases[$slug] : array()
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header class="site-header">
+<?php render_header(); ?>
   <div class="container nav">
     <a class="brand brand-logo" href="index.php"><img src="assets/customer/logo.png" alt="飞行魔方 Logo"></a>
     <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="打开导航菜单">☰</button>
@@ -63,7 +64,7 @@ $relatedCases = isset($productToCases[$slug]) ? $productToCases[$slug] : array()
         <div class="breadcrumb"><a href="index.php">首页</a> / 产品不存在</div>
         <h1>未找到对应产品</h1>
         <p>请返回产品中心重新选择。</p>
-        <a class="btn btn-primary" href="products.php">返回产品中心</a>
+        <a class="btn btn-primary" href="<?= url_with_lang('products.php') ?>"><?= htmlspecialchars(t('返回产品中心', 'Back to Products')) ?></a>
       </div>
     <?php else: ?>
       <div class="breadcrumb"><a href="index.php">首页</a> / <a href="products.php">产品中心</a> / <?= htmlspecialchars($product['name']) ?></div>
@@ -79,7 +80,7 @@ $relatedCases = isset($productToCases[$slug]) ? $productToCases[$slug] : array()
           </div>
           <p><?= htmlspecialchars($product['description']) ?></p>
           <div class="hero-actions">
-            <a class="btn btn-primary" href="contact.php">获取报价</a>
+            <a class="btn btn-primary" href="<?= url_with_lang('contact.php') ?>"><?= htmlspecialchars(t('获取报价', 'Get a Quote')) ?></a>
             <a class="btn btn-secondary" href="products.php">查看更多产品</a>
           </div>
         </div>

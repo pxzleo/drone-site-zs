@@ -1,14 +1,15 @@
 <?php $news = require __DIR__ . '/myfolder/news.php'; ?>
+<?php require __DIR__ . '/i18n.php'; ?>
 <!doctype html>
-<html lang="zh-CN">
+<html lang="<?= $lang === 'zh' ? 'zh-CN' : 'en' ?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>新闻资讯 | 北京飞行魔方科技有限公司</title>
+  <title><?= htmlspecialchars(t('新闻资讯 | 北京飞行魔方科技有限公司', 'News | Beijing Flicube Technology')) ?></title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header class="site-header">
+<?php render_header(); ?>
   <div class="container nav">
     <a class="brand brand-logo" href="index.php"><img src="assets/customer/logo.png" alt="飞行魔方 Logo"></a>
     <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="打开导航菜单">☰</button>
@@ -34,7 +35,7 @@
 
 <section class="page-hero">
   <div class="container">
-    <div class="breadcrumb"><a href="index.php">首页</a> / 新闻资讯</div>
+    <div class="breadcrumb"><a href="<?= url_with_lang('index.php') ?>"><?= htmlspecialchars(t('首页', 'Home')) ?></a> / <?= htmlspecialchars(t('新闻资讯', 'News')) ?></div>
     <div class="section-header">
       <h1>产品动态与企业资讯</h1>
       <p>围绕公司产品、应用方向与企业相关信息，展示物流、应急、编队、载人及低空平台等业务内容。</p>
@@ -51,7 +52,7 @@
     <div class="grid grid-3">
       <?php foreach ($news as $slug => $item): ?>
         <article class="card news-card">
-          <a href="news-detail.php?slug=<?= urlencode($slug) ?>" style="display:block;color:inherit;text-decoration:none;">
+          <a href="<?= url_with_lang('news-detail.php', ['slug' => $slug]) ?>" style="display:block;color:inherit;text-decoration:none;">
             <div class="card-body">
               <span class="news-date"><?= htmlspecialchars($item['date']) ?></span>
               <h3><?= htmlspecialchars($item['title']) ?></h3>

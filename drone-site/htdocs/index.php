@@ -2,39 +2,18 @@
 $products = require __DIR__ . '/myfolder/products.php';
 $featured = array_slice($products, 0, 8, true);
 ?>
+<?php require __DIR__ . '/i18n.php'; ?>
 <!doctype html>
-<html lang="zh-CN">
+<html lang="<?= $lang === 'zh' ? 'zh-CN' : 'en' ?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>北京飞行魔方科技有限公司 | 低空经济无人机与飞行平台</title>
-  <meta name="description" content="北京飞行魔方科技有限公司成立于 2016 年，聚焦飞控、机体、AI 与云平台一体化研发，产品覆盖物流无人机、编队表演无人机、载人飞行器、应急消防无人机及低空飞行综合管理服务平台。">
+  <title><?= htmlspecialchars(t('北京飞行魔方科技有限公司 | 低空经济无人机与飞行平台', 'Beijing Flicube Technology | Low-Altitude Drones and Flight Platforms')) ?></title>
+  <meta name="description" content="<?= htmlspecialchars(t('北京飞行魔方科技有限公司成立于 2016 年，聚焦飞控、机体、AI 与云平台一体化研发，产品覆盖物流无人机、编队表演无人机、载人飞行器、应急消防无人机及低空飞行综合管理服务平台。', 'Founded in 2016, Beijing Flicube Technology focuses on integrated R&D in flight control, airframes, AI and cloud platforms, with products spanning logistics drones, drone light shows, manned aircraft, emergency firefighting drones and low-altitude management platforms.')) ?>">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand brand-logo" href="index.php"><img src="assets/customer/logo.png" alt="飞行魔方 Logo"></a>
-    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="打开导航菜单">☰</button>
-    <nav class="menu">
-      <a href="about.php">公司介绍</a>
-      <a href="products.php">产品中心</a>
-      <a href="cases.php">应用案例</a>
-      <a href="news.php">新闻资讯</a>
-      <a href="#technology">技术优势</a>
-      <a href="contact.php" class="cta">联系我们</a>
-    </nav>
-  </div>
-  <div class="container mobile-nav-wrap" id="mobile-menu-panel">
-    <nav class="mobile-menu">
-      <a href="about.php">公司介绍</a>
-      <a href="products.php">产品中心</a>
-      <a href="cases.php">应用案例</a>
-      <a href="news.php">新闻资讯</a>
-      <a href="contact.php">联系我们</a>
-    </nav>
-  </div>
-</header>
+<?php render_header('home'); ?>
 
 <section class="hero hero-tall">
   <video class="hero-bg hero-video" autoplay muted loop playsinline preload="auto" poster="assets/customer/homepage/webvideo1-poster.jpg" aria-label="飞行魔方物流无人机视频主视觉">
@@ -42,11 +21,11 @@ $featured = array_slice($products, 0, 8, true);
   </video>
   <div class="container hero-content hero-single">
     <div class="hero-copy">
-      <h1 class="hero-title">低空物流、应急、编队、大载重等多场景产品体系</h1>
-      <p>北京飞行魔方科技成立于 2016 年，聚焦飞控、机体、AI 与云平台一体化研发，产品覆盖物流无人机、应急消防无人机、编队表演平台、载人飞行器与低空飞行综合管理服务平台。</p>
+      <h1 class="hero-title"><?= htmlspecialchars(t('低空物流、应急、编队、大载重等多场景产品体系', 'Product portfolio for low-altitude logistics, emergency response, drone shows and heavy-lift operations')) ?></h1>
+      <p><?= htmlspecialchars(t('北京飞行魔方科技成立于 2016 年，聚焦飞控、机体、AI 与云平台一体化研发，产品覆盖物流无人机、应急消防无人机、编队表演平台、载人飞行器与低空飞行综合管理服务平台。', 'Founded in 2016, Flicube focuses on integrated R&D in flight control, airframes, AI and cloud platforms, with products covering logistics drones, emergency firefighting drones, drone show platforms, manned aircraft and low-altitude integrated management platforms.')) ?></p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="products.php">查看产品中心</a>
-        <a class="btn btn-secondary" href="#gallery">查看核心影像</a>
+        <a class="btn btn-primary" href="<?= url_with_lang('products.php') ?>"><?= htmlspecialchars(t('查看产品中心', 'View Products')) ?></a>
+        <a class="btn btn-secondary" href="#gallery"><?= htmlspecialchars(t('查看核心影像', 'View Key Visuals')) ?></a>
       </div>
     </div>
   </div>
@@ -273,11 +252,11 @@ $featured = array_slice($products, 0, 8, true);
 
 <footer class="footer" style="background:linear-gradient(180deg,rgba(8,18,30,.96),rgba(5,12,22,.98));border-top:1px solid rgba(255,255,255,.08);padding-top:32px;">
   <div class="container footer-bottom" style="color:#eef6ff;">
-    <div style="color:#eef6ff;">© <?php echo date('Y'); ?> 北京飞行魔方科技有限公司</div>
+    <div style="color:#eef6ff;">© <?php echo date('Y'); ?> <?= htmlspecialchars(t('北京飞行魔方科技有限公司', 'Beijing Flicube Technology Co., Ltd.')) ?></div>
     <div style="color:#d9ebff;">flicube.com</div>
   </div>
   <div class="container" style="margin-top:14px;text-align:center;font-size:14px;color:#ffffff;font-weight:700;letter-spacing:.03em;text-shadow:0 2px 10px rgba(0,0,0,.35);">
-    备案号：京ICP备17001976号-2
+    <?= htmlspecialchars(t('备案号：京ICP备17001976号-2', 'ICP Filing No.: 京ICP备17001976号-2')) ?>
   </div>
 </footer>
 <script>

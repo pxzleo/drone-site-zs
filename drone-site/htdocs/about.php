@@ -1,13 +1,14 @@
+<?php require __DIR__ . '/i18n.php'; ?>
 <!doctype html>
-<html lang="zh-CN">
+<html lang="<?= $lang === 'zh' ? 'zh-CN' : 'en' ?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>公司介绍 | 北京飞行魔方科技有限公司</title>
+  <title><?= htmlspecialchars(t('公司介绍 | 北京飞行魔方科技有限公司', 'About | Beijing Flicube Technology')) ?></title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header class="site-header">
+<?php render_header(); ?>
   <div class="container nav">
     <a class="brand brand-logo" href="index.php"><img src="assets/customer/logo.png" alt="飞行魔方 Logo"></a>
     <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="打开导航菜单">☰</button>
@@ -33,7 +34,7 @@
 
 <section class="page-hero">
   <div class="container">
-    <div class="breadcrumb"><a href="index.php">首页</a> / 公司介绍</div>
+    <div class="breadcrumb"><a href="<?= url_with_lang('index.php') ?>"><?= htmlspecialchars(t('首页', 'Home')) ?></a> / <?= htmlspecialchars(t('公司介绍', 'About')) ?></div>
     <div class="section-header">
       <h1>北京飞行魔方科技：以自主研发为核心的低空经济产品企业</h1>
       <p>北京飞行魔方科技成立于 2016 年，团队由清华、北航技术骨干及前亿航高管组成，具备飞控、机体、整机量产与系统平台的一体化研发能力。</p>

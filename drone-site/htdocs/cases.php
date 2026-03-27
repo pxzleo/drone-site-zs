@@ -1,14 +1,15 @@
 <?php $cases = require __DIR__ . '/myfolder/cases.php'; ?>
+<?php require __DIR__ . '/i18n.php'; ?>
 <!doctype html>
-<html lang="zh-CN">
+<html lang="<?= $lang === 'zh' ? 'zh-CN' : 'en' ?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>应用案例 | 北京飞行魔方科技有限公司</title>
+  <title><?= htmlspecialchars(t('应用案例 | 北京飞行魔方科技有限公司', 'Cases | Beijing Flicube Technology')) ?></title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header class="site-header">
+<?php render_header(); ?>
   <div class="container nav">
     <a class="brand brand-logo" href="index.php"><img src="assets/customer/logo.png" alt="飞行魔方 Logo"></a>
     <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="打开导航菜单">☰</button>
@@ -34,7 +35,7 @@
 
 <section class="page-hero">
   <div class="container">
-    <div class="breadcrumb"><a href="index.php">首页</a> / 应用案例</div>
+    <div class="breadcrumb"><a href="<?= url_with_lang('index.php') ?>"><?= htmlspecialchars(t('首页', 'Home')) ?></a> / <?= htmlspecialchars(t('应用案例', 'Cases')) ?></div>
     <div class="section-header">
       <h1>围绕真实低空场景构建产品与平台能力</h1>
       <p>从物流运输到应急消防，从文旅编队到载人展示，再到低空飞行综合管理平台，飞行魔方面向多行业提供解决方案。</p>
@@ -46,7 +47,7 @@
   <div class="container grid grid-2">
     <?php foreach ($cases as $slug => $case): ?>
       <article class="card case-card">
-        <a href="case.php?slug=<?= urlencode($slug) ?>" style="display:block;color:inherit;text-decoration:none;">
+        <a href="<?= url_with_lang('case.php', ['slug' => $slug]) ?>" style="display:block;color:inherit;text-decoration:none;">
           <img src="<?= htmlspecialchars($case['image']) ?>" alt="<?= htmlspecialchars($case['title']) ?>">
           <div class="card-body">
             <h3><?= htmlspecialchars($case['title']) ?></h3>
