@@ -36,7 +36,6 @@
   <div class="container">
     <div class="breadcrumb"><a href="index.php">首页</a> / 应用案例</div>
     <div class="section-header">
-      <span class="eyebrow">应用案例</span>
       <h1>围绕真实低空场景构建产品与平台能力</h1>
       <p>从物流运输到应急消防，从文旅编队到载人展示，再到低空飞行综合管理平台，飞行魔方面向多行业提供解决方案。</p>
     </div>

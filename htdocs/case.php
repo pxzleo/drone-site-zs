@@ -67,7 +67,6 @@ $productLinks = [
       <div class="product-layout">
         <div class="photo"><img src="<?= htmlspecialchars($case['image']) ?>" alt="<?= htmlspecialchars($case['title']) ?>"></div>
         <div>
-          <span class="eyebrow">案例详情</span>
           <h1 class="detail-title"><?= htmlspecialchars($case['title']) ?></h1>
           <p style="font-size:18px;color:#d5e4f8"><?= htmlspecialchars($case['subtitle']) ?></p>
           <p><?= htmlspecialchars($case['summary']) ?></p>
