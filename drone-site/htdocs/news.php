@@ -45,7 +45,7 @@
 <section class="section">
   <div class="container">
     <div class="media-grid" style="margin-bottom:28px;">
-      <div class="media-card"><img src="assets/customer/logistics-100-x13.png" alt="100 公斤级运输平台"><p>100 公斤级运输平台设计图</p></div>
+      <div class="media-card"><img src="assets/customer/logistics-100.png" alt="100 公斤无人机"><p>100 公斤级运输无人机</p></div>
       <div class="media-card"><img src="assets/customer/show-line3.png" alt="室内编队设计图"><p>室内编队设计图</p></div>
     </div>
     <div class="grid grid-3">
