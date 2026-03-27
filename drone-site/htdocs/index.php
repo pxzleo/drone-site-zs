@@ -38,7 +38,7 @@ $featured = array_slice($products, 0, 8, true);
 
 <section class="hero hero-tall">
   <video class="hero-bg hero-video" autoplay muted loop playsinline preload="auto" poster="assets/customer/homepage/webvideo1-poster.jpg" aria-label="飞行魔方物流无人机视频主视觉">
-    <source src="assets/customer/homepage/webvideo1.mp4" type="video/mp4">
+    <source src="assets/customer/homepage/webvideo1-web.mp4" type="video/mp4">
   </video>
   <div class="container hero-content hero-single">
     <div class="hero-copy">
