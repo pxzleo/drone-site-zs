@@ -167,7 +167,7 @@ $relatedCases = isset($productToCases[$slug]) ? $productToCases[$slug] : array()
   <div class="container">
     <div class="section-header centered">
       <h2>相关案例</h2>
-      <p>该产品可进一步对应到以下应用案例页面。</p>
+      <p>以下为与该产品相关的应用案例页面。</p>
     </div>
     <div class="grid grid-3">
       <?php foreach ($relatedCases as $caseSlug): ?>

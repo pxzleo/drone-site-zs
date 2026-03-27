@@ -35,8 +35,8 @@
   <div class="container">
     <div class="breadcrumb"><a href="index.php">首页</a> / 新闻资讯</div>
     <div class="section-header">
-      <h1>产品动态、方案方向与资料整理进展</h1>
-      <p>当前新闻页已由模板内容改为结合现有素材整理的企业动态示意，可继续替换为真实新闻稿、媒体报道和展会信息。</p>
+      <h1>产品动态与企业资讯</h1>
+      <p>围绕公司产品、应用方向与企业相关信息，展示物流、应急、编队、载人及低空平台等业务内容。</p>
     </div>
   </div>
 </section>
@@ -48,7 +48,7 @@
       <div class="media-card"><img src="assets/customer/show-line3.png" alt="室内编队设计图"><p>室内编队设计图</p></div>
     </div>
     <div class="grid grid-3">
-      <article class="card news-card"><div class="card-body"><span class="news-date">2026-03-26</span><h3>官网已完成首轮真实资料替换</h3><p>已依据现有站内素材完成公司名称、产品矩阵、图片内容和应用方向替换，后续可继续补充联系方式与下载资料。</p></div></article>
+      <article class="card news-card"><div class="card-body"><span class="news-date">2026-03-26</span><h3>官网内容更新完成</h3><p>网站已围绕公司介绍、产品中心、应用案例与联系信息进行统一更新，展示飞行魔方在低空领域的业务内容与产品方向。</p></div></article>
       <article class="card news-card"><div class="card-body"><span class="news-date">2025-10</span><h3>FC-F150pro 聚焦智慧消防场景</h3><p>资料显示，该平台面向森林火灾、城市建筑、危化品和灾害救援场景，支持大载重消防投弹与双光成像作业。</p></div></article>
       <article class="card news-card"><div class="card-body"><span class="news-date">2025</span><h3>150 公斤与 300 公斤物流无人机平台持续扩展</h3><p>FC-TS150 与 FC-TS300 面向高载重运输、挂载投送与自动物流流程，展示了飞行魔方在重载物流方向的布局。</p></div></article>
       <article class="card news-card"><div class="card-body"><span class="news-date">2025</span><h3>星幻编队无人机可用于大型室外演出</h3><p>资料显示，多星多频 RTK、升级动力系统与自主网通信系统可用于支持外场复杂环境下的编队任务。</p></div></article>

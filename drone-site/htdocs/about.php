@@ -64,7 +64,7 @@
   <div class="container">
     <div class="section-header centered">
       <h2>能力与资质</h2>
-      <p>根据资料整理出的公司能力重点与代表性履历。</p>
+      <p>展示公司在自主研发、产品布局、项目经验与资质方向方面的核心情况。</p>
     </div>
     <div class="media-grid" style="margin-bottom:28px;">
       <div class="media-card"><img src="assets/customer/manned-p.png" alt="飞行魔方载人飞行器细节图"><p>载人飞行器细节图</p></div>

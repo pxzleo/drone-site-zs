@@ -260,11 +260,11 @@ $featured = array_slice($products, 0, 8, true);
       <p><a href="#gallery">影像中心</a></p>
     </div>
     <div class="contact-card">
-      <h3>当前已完成</h3>
-      <p>公司名与介绍替换</p>
-      <p>产品中心重建</p>
-      <p>真实图片素材接入</p>
-      <p>模板文案清理</p>
+      <h3>网站内容</h3>
+      <p>公司介绍与品牌信息</p>
+      <p>产品中心与应用案例</p>
+      <p>真实图片与视频素材展示</p>
+      <p>联系方式与业务方向说明</p>
     </div>
   </div>
 </section>
