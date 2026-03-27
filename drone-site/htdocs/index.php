@@ -46,7 +46,7 @@ $featured = array_slice($products, 0, 8, true);
       <h1 class="hero-title">低空物流、应急、编队、大载重等多场景产品体系</h1>
       <p>北京飞行魔方科技成立于 2016 年，聚焦飞控、机体、AI 与云平台一体化研发，产品覆盖物流无人机、应急消防无人机、编队表演平台、载人飞行器与低空飞行综合管理服务平台。</p>
       <div class="hero-actions">
-        <a class="btn btn-primary" href="products.php">查看产品矩阵</a>
+        <a class="btn btn-primary" href="products.php">查看产品中心</a>
         <a class="btn btn-secondary" href="#gallery">查看核心影像</a>
       </div>
     </div>
@@ -267,7 +267,7 @@ $featured = array_slice($products, 0, 8, true);
     <div class="contact-card">
       <h3>当前已完成</h3>
       <p>公司名与介绍替换</p>
-      <p>产品矩阵重建</p>
+      <p>产品中心重建</p>
       <p>真实图片素材接入</p>
       <p>模板文案清理</p>
     </div>
