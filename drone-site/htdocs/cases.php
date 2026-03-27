@@ -46,14 +46,16 @@
   <div class="container grid grid-2">
     <?php foreach ($cases as $slug => $case): ?>
       <article class="card case-card">
-        <img src="<?= htmlspecialchars($case['image']) ?>" alt="<?= htmlspecialchars($case['title']) ?>">
-        <div class="card-body">
-          <h3><?= htmlspecialchars($case['title']) ?></h3>
-          <p><?= htmlspecialchars($case['summary']) ?></p>
-          <div class="hero-actions" style="margin-top:18px;">
-            <a class="btn btn-secondary" href="case.php?slug=<?= urlencode($slug) ?>">查看案例详情</a>
+        <a href="case.php?slug=<?= urlencode($slug) ?>" style="display:block;color:inherit;text-decoration:none;">
+          <img src="<?= htmlspecialchars($case['image']) ?>" alt="<?= htmlspecialchars($case['title']) ?>">
+          <div class="card-body">
+            <h3><?= htmlspecialchars($case['title']) ?></h3>
+            <p><?= htmlspecialchars($case['summary']) ?></p>
+            <div class="hero-actions" style="margin-top:18px;">
+              <span class="btn btn-secondary">查看案例详情</span>
+            </div>
           </div>
-        </div>
+        </a>
       </article>
     <?php endforeach; ?>
   </div>
