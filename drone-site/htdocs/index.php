@@ -88,11 +88,11 @@ $featured = array_slice($products, 0, 8, true);
 <section class="section" id="about">
   <div class="container showcase reverse-mobile">
     <div>
-      <div class="section-header">
-        <h2 style="color:#041525;text-shadow:none;">以“飞控 + 机体 + AI + 云”构建面向低空场景的产品与服务能力</h2>
-        <p style="color:#1b3d5a;font-weight:600;">飞行魔方聚焦低空经济场景下的整机、系统和平台协同交付，围绕产品方向、应用场景与配套服务能力展开整体展示。</p>
+      <div class="section-header" style="padding:24px 28px;border-radius:24px;background:linear-gradient(180deg,#2f8fff 0%,#67d6ff 100%);box-shadow:0 18px 42px rgba(47,143,255,.22);">
+        <h2 style="color:#f8fdff;text-shadow:0 2px 10px rgba(7,31,56,.18);">以“飞控 + 机体 + AI + 云”构建面向低空场景的产品与服务能力</h2>
+        <p style="color:#eef9ff;font-weight:600;">飞行魔方聚焦低空经济场景下的整机、系统和平台协同交付，围绕产品方向、应用场景与配套服务能力展开整体展示。</p>
       </div>
-      <div class="dark-panel">
+      <div class="dark-panel" style="margin-top:18px;">
         <p>公司具备自研自适应 PID 算法和优化的 EKF 多传感器融合算法，拥有多旋翼、直升机、固定翼、eVTOL 等构型空气动力学与结构设计经验，并通过云原生微服务平台支撑批量调度控制、实时监测、空域合规校验与高清直播。</p>
         <ul class="feature-list">
           <li>物流无人机：覆盖 5kg、8kg、50kg、100kg、150kg、300kg 多级运载能力</li>
