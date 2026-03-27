@@ -1,220 +1,42 @@
 <?php
 $products = require __DIR__ . '/myfolder/products.php';
 $cases = require __DIR__ . '/myfolder/cases.php';
+require __DIR__ . '/i18n.php';
 $slug = isset($_GET['slug']) ? $_GET['slug'] : '';
 $product = isset($products[$slug]) ? $products[$slug] : null;
-if (!$product) {
-    http_response_code(404);
-}
+if (!$product) { http_response_code(404); }
 $gallery = isset($product['gallery']) ? $product['gallery'] : ($product ? array($product['image']) : array());
 $video = isset($product['video']) ? $product['video'] : null;
 $productToCases = [
-    'fc-130' => ['low-altitude-logistics'],
-    'fc-0510' => ['low-altitude-logistics'],
-    'tf70' => ['heavy-industrial-transport'],
-    'fc-5100n' => ['heavy-industrial-transport'],
-    'fc-ts150' => ['low-altitude-logistics', 'heavy-industrial-transport'],
-    'fc-ts300' => ['low-altitude-logistics', 'heavy-industrial-transport'],
-    'fc-f150pro' => ['emergency-firefighting'],
-    'xh-v21' => ['cultural-drone-show', 'indoor-outdoor-show'],
-    'indoor-show' => ['cultural-drone-show', 'indoor-outdoor-show', 'indoor-pattern-design'],
-    'eggcraft' => ['manned-experience'],
-    'uav-platform' => ['low-altitude-platform']
+    'fc-130' => ['low-altitude-logistics'],'fc-0510' => ['low-altitude-logistics'],'tf70' => ['heavy-industrial-transport'],'fc-5100n' => ['heavy-industrial-transport'],'fc-ts150' => ['low-altitude-logistics', 'heavy-industrial-transport'],'fc-ts300' => ['low-altitude-logistics', 'heavy-industrial-transport'],'fc-f150pro' => ['emergency-firefighting'],'xh-v21' => ['cultural-drone-show', 'indoor-outdoor-show'],'indoor-show' => ['cultural-drone-show', 'indoor-outdoor-show', 'indoor-pattern-design'],'eggcraft' => ['manned-experience'],'uav-platform' => ['low-altitude-platform']
 ];
 $relatedCases = isset($productToCases[$slug]) ? $productToCases[$slug] : array();
 ?>
 <!doctype html>
-<html lang="zh-CN">
+<html lang="<?= $lang === 'zh' ? 'zh-CN' : 'en' ?>">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title><?= $product ? htmlspecialchars($product['name']) : '产品不存在' ?> | 北京飞行魔方科技有限公司</title>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><?= $product ? htmlspecialchars(localized($product['name']) . ' | ' . t('北京飞行魔方科技有限公司', 'Beijing Flicube Technology')) : htmlspecialchars(t('产品不存在', 'Product Not Found')) ?></title>
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand brand-logo" href="index.php"><img src="assets/customer/logo.png" alt="飞行魔方 Logo"></a>
-    <button class="mobile-menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu-panel" aria-label="打开导航菜单">☰</button>
-    <nav class="menu">
-      <a href="index.php">首页</a>
-      <a href="about.php">公司介绍</a>
-      <a href="products.php">产品中心</a>
-      <a href="cases.php">应用案例</a>
-      <a href="news.php">新闻资讯</a>
-      <a href="contact.php" class="cta">联系我们</a>
-    </nav>
-  </div>
-  <div class="container mobile-nav-wrap" id="mobile-menu-panel">
-    <nav class="mobile-menu">
-      <a href="about.php">公司介绍</a>
-      <a href="products.php">产品中心</a>
-      <a href="cases.php">应用案例</a>
-      <a href="news.php">新闻资讯</a>
-      <a href="contact.php">联系我们</a>
-    </nav>
-  </div>
-</header>
-
-<section class="page-hero">
-  <div class="container">
-    <?php if (!$product): ?>
-      <div class="section-header">
-        <div class="breadcrumb"><a href="index.php">首页</a> / 产品不存在</div>
-        <h1>未找到对应产品</h1>
-        <p>请返回产品中心重新选择。</p>
-        <a class="btn btn-primary" href="products.php">返回产品中心</a>
-      </div>
-    <?php else: ?>
-      <div class="breadcrumb"><a href="index.php">首页</a> / <a href="products.php">产品中心</a> / <?= htmlspecialchars($product['name']) ?></div>
-      <div class="product-layout">
-        <div class="photo"><img src="<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['name']) ?>"></div>
-        <div>
-          <h1 class="detail-title"><?= htmlspecialchars($product['name']) ?></h1>
-          <p style="font-size:18px;color:#d5e4f8"><?= htmlspecialchars($product['hero']) ?></p>
-          <div class="product-meta" style="margin:22px 0 6px">
-            <span>载荷 <?= htmlspecialchars($product['payload']) ?></span>
-            <span>续航 <?= htmlspecialchars($product['endurance']) ?></span>
-            <span>航程 <?= htmlspecialchars($product['range']) ?></span>
-          </div>
-          <p><?= htmlspecialchars($product['description']) ?></p>
-          <div class="hero-actions">
-            <a class="btn btn-primary" href="contact.php">获取报价</a>
-            <a class="btn btn-secondary" href="products.php">查看更多产品</a>
-          </div>
-        </div>
-      </div>
-    <?php endif; ?>
-  </div>
-</section>
-
+<?php render_header(); ?>
+<section class="page-hero"><div class="container">
+<?php if (!$product): ?>
+<div class="section-header"><div class="breadcrumb"><a href="<?= url_with_lang('index.php') ?>"><?= htmlspecialchars(t('首页','Home')) ?></a> / <?= htmlspecialchars(t('产品不存在','Product Not Found')) ?></div><h1><?= htmlspecialchars(t('未找到对应产品','Product Not Found')) ?></h1><p><?= htmlspecialchars(t('请返回产品中心重新选择。','Please return to the products page and choose again.')) ?></p><a class="btn btn-primary" href="<?= url_with_lang('products.php') ?>"><?= htmlspecialchars(t('返回产品中心','Back to Products')) ?></a></div>
+<?php else: ?>
+<div class="breadcrumb"><a href="<?= url_with_lang('index.php') ?>"><?= htmlspecialchars(t('首页','Home')) ?></a> / <a href="<?= url_with_lang('products.php') ?>"><?= htmlspecialchars(t('产品中心','Products')) ?></a> / <?= htmlspecialchars(localized($product['name'])) ?></div>
+<div class="product-layout"><div class="photo"><img src="<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars(localized($product['name'])) ?>"></div><div><h1 class="detail-title"><?= htmlspecialchars(localized($product['name'])) ?></h1><p style="font-size:18px;color:#d5e4f8"><?= htmlspecialchars(localized($product['hero'])) ?></p><div class="product-meta" style="margin:22px 0 6px"><span><?= htmlspecialchars(t('载荷 ','Payload ')) . htmlspecialchars(localized($product['payload'])) ?></span><span><?= htmlspecialchars(t('续航 ','Endurance ')) . htmlspecialchars(localized($product['endurance'])) ?></span><span><?= htmlspecialchars(t('航程 ','Range ')) . htmlspecialchars(localized($product['range'])) ?></span></div><p><?= htmlspecialchars(localized($product['description'])) ?></p><div class="hero-actions"><a class="btn btn-primary" href="<?= url_with_lang('contact.php') ?>"><?= htmlspecialchars(t('获取报价','Get a Quote')) ?></a><a class="btn btn-secondary" href="<?= url_with_lang('products.php') ?>"><?= htmlspecialchars(t('查看更多产品','View More Products')) ?></a></div></div></div>
+<?php endif; ?>
+</div></section>
 <?php if ($product): ?>
-<section class="section">
-  <div class="container grid grid-2">
-    <div class="dark-panel">
-      <h2>产品特点</h2>
-      <ul class="feature-list">
-        <?php foreach ($product['features'] as $feature): ?>
-          <li><?= htmlspecialchars($feature) ?></li>
-        <?php endforeach; ?>
-      </ul>
-    </div>
-    <div class="dark-panel">
-      <h2>核心参数</h2>
-      <table class="spec-table">
-        <?php foreach ($product['specs'] as $label => $value): ?>
-        <tr>
-          <th><?= htmlspecialchars($label) ?></th>
-          <td><?= htmlspecialchars($value) ?></td>
-        </tr>
-        <?php endforeach; ?>
-      </table>
-    </div>
-  </div>
-</section>
-
-<section class="section dark-section">
-  <div class="container grid grid-3">
-    <div class="dark-panel tall-panel"><h3>适用场景</h3><p><?= htmlspecialchars($product['name']) ?> 适合根据具体产品方向应用于物流运输、应急消防、文旅演艺、载人展示、低空监管平台接入等场景，并支持按任务需求进行配置调整。</p></div>
-    <div class="dark-panel tall-panel"><h3>任务扩展</h3><p>支持按行业需求搭载货舱、吊挂、光电、喊话、照明或定制任务模块，并支持接口与系统联动扩展。</p></div>
-    <div class="dark-panel tall-panel"><h3>交付支持</h3><p>可提供培训、维保、备件、现场支持与运营协同服务，具体内容以实际沟通和项目约定为准。</p></div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container showcase">
-    <div class="photo"><img src="<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['name']) ?> 场景图"></div>
-    <div class="dark-panel">
-      <h2>方案说明</h2>
-      <p><?= htmlspecialchars($product['name']) ?> 可根据项目预算、场景复杂度和任务频率形成标准版、增强版或定制版配置。对于行业客户，我们还可配套地面站、培训方案、巡检流程或运输作业方案，帮助形成完整交付。</p>
-      <div class="timeline">
-        <div class="timeline-item"><strong>标准部署</strong><br>适合常规场景，交付周期短，适于快速启动项目。</div>
-        <div class="timeline-item"><strong>行业增强</strong><br>增加任务挂载、数据接口与更适合复杂场景的系统配置。</div>
-        <div class="timeline-item"><strong>深度定制</strong><br>针对大型行业客户，支持软硬件联合定制与系统级联动。</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <div class="section-header centered">
-      <h2>图像与媒体资料</h2>
-      <p>展示与该产品相关的图像与视频内容，便于了解产品外观与应用场景。</p>
-    </div>
-    <div class="media-grid">
-      <?php foreach ($gallery as $mediaImage): ?>
-        <div class="media-card">
-          <img src="<?= htmlspecialchars($mediaImage) ?>" alt="<?= htmlspecialchars($product['name']) ?> 图像资料">
-          <p><?= htmlspecialchars($product['name']) ?> 相关图像资料</p>
-        </div>
-      <?php endforeach; ?>
-      <?php if ($video): ?>
-        <div class="media-card" style="grid-column:1 / -1;">
-          <video controls preload="metadata">
-            <source src="<?= htmlspecialchars($video) ?>" type="video/mp4">
-            您的浏览器暂不支持视频播放。
-          </video>
-          <p><?= htmlspecialchars($product['name']) ?> 相关视频资料</p>
-        </div>
-      <?php endif; ?>
-    </div>
-  </div>
-</section>
-
-<?php if ($relatedCases): ?>
-<section class="section dark-section">
-  <div class="container">
-    <div class="section-header centered">
-      <h2>相关案例</h2>
-      <p>以下为与该产品相关的应用案例页面。</p>
-    </div>
-    <div class="grid grid-3">
-      <?php foreach ($relatedCases as $caseSlug): ?>
-        <?php if (isset($cases[$caseSlug])): ?>
-          <div class="dark-panel tall-panel">
-            <h3><?= htmlspecialchars($cases[$caseSlug]['title']) ?></h3>
-            <p><?= htmlspecialchars($cases[$caseSlug]['summary']) ?></p>
-            <a class="btn btn-secondary" href="case.php?slug=<?= urlencode($caseSlug) ?>">查看案例详情</a>
-          </div>
-        <?php endif; ?>
-      <?php endforeach; ?>
-    </div>
-  </div>
-</section>
+<section class="section"><div class="container grid grid-2"><div class="dark-panel"><h2><?= htmlspecialchars(t('产品特点','Features')) ?></h2><ul class="feature-list"><?php foreach ($product['features'] as $feature): ?><li><?= htmlspecialchars(localized($feature)) ?></li><?php endforeach; ?></ul></div><div class="dark-panel spec-panel"><h2><?= htmlspecialchars(t('核心参数','Specifications')) ?></h2><table class="spec-table"><?php foreach ($product['specs'] as $row): ?><tr><th><?= htmlspecialchars(localized($row['label'])) ?></th><td><?= htmlspecialchars(localized($row['value'])) ?></td></tr><?php endforeach; ?></table></div></div></section>
+<section class="section dark-section"><div class="container grid grid-3"><div class="dark-panel tall-panel"><h3><?= htmlspecialchars(t('适用场景','Application Scenarios')) ?></h3><p><?= htmlspecialchars(localized($product['name'])) ?> <?= htmlspecialchars(t('适合根据具体产品方向应用于物流运输、应急消防、文旅演艺、载人展示、低空监管平台接入等场景，并支持按任务需求进行配置调整。','can be configured for logistics transport, emergency firefighting, cultural performances, manned display and low-altitude platform integration, with setup tailored to mission requirements.')) ?></p></div><div class="dark-panel tall-panel"><h3><?= htmlspecialchars(t('任务扩展','Mission Expansion')) ?></h3><p><?= htmlspecialchars(t('支持按行业需求搭载货舱、吊挂、光电、喊话、照明或定制任务模块，并支持接口与系统联动扩展。','Supports cargo bays, suspended payloads, EO systems, loudspeakers, lighting and custom mission modules, with expandable interfaces for system integration.')) ?></p></div><div class="dark-panel tall-panel"><h3><?= htmlspecialchars(t('交付支持','Delivery Support')) ?></h3><p><?= htmlspecialchars(t('可提供培训、维保、备件、现场支持与运营协同服务，具体内容以实际沟通和项目约定为准。','Training, maintenance, spare parts, on-site support and operational coordination services can be provided depending on project agreement.')) ?></p></div></div></section>
+<section class="section"><div class="container showcase"><div class="photo"><img src="<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars(localized($product['name'])) ?>"></div><div class="dark-panel"><h2><?= htmlspecialchars(t('方案说明','Solution Overview')) ?></h2><p><?= htmlspecialchars(localized($product['name'])) ?> <?= htmlspecialchars(t('可根据项目预算、场景复杂度和任务频率形成标准版、增强版或定制版配置。对于行业客户，我们还可配套地面站、培训方案、巡检流程或运输作业方案，帮助形成完整交付。','can be configured in standard, enhanced or customized versions depending on budget, scenario complexity and mission frequency. For industry customers, we can also provide ground stations, training, inspection workflows or transport procedures to support complete delivery.')) ?></p></div></div></section>
+<section class="section"><div class="container"><div class="section-header centered"><h2><?= htmlspecialchars(t('图像与媒体资料','Images and Media')) ?></h2><p><?= htmlspecialchars(t('展示与该产品相关的图像与视频内容，便于了解产品外观与应用场景。','Related images and videos help illustrate product appearance and application scenarios.')) ?></p></div><div class="media-grid"><?php foreach ($gallery as $mediaImage): ?><div class="media-card"><img src="<?= htmlspecialchars($mediaImage) ?>" alt="<?= htmlspecialchars(localized($product['name'])) ?>"><p><?= htmlspecialchars(localized($product['name'])) ?> <?= htmlspecialchars(t('相关图像资料','image reference')) ?></p></div><?php endforeach; ?><?php if ($video): ?><div class="media-card" style="grid-column:1 / -1;"><video controls preload="metadata"><source src="<?= htmlspecialchars($video) ?>" type="video/mp4"><?= htmlspecialchars(t('您的浏览器暂不支持视频播放。','Your browser does not support video playback.')) ?></video><p><?= htmlspecialchars(localized($product['name'])) ?> <?= htmlspecialchars(t('相关视频资料','video reference')) ?></p></div><?php endif; ?></div></div></section>
+<?php if ($relatedCases): ?><section class="section dark-section"><div class="container"><div class="section-header centered"><h2><?= htmlspecialchars(t('相关案例','Related Cases')) ?></h2><p><?= htmlspecialchars(t('以下为与该产品相关的应用案例页面。','Below are case pages related to this product.')) ?></p></div><div class="grid grid-3"><?php foreach ($relatedCases as $caseSlug): ?><?php if (isset($cases[$caseSlug])): ?><div class="dark-panel tall-panel"><h3><?= htmlspecialchars(localized($cases[$caseSlug]['title'])) ?></h3><p><?= htmlspecialchars(localized($cases[$caseSlug]['summary'])) ?></p><a class="btn btn-secondary" href="<?= url_with_lang('case.php', ['slug' => $caseSlug]) ?>"><?= htmlspecialchars(t('查看案例详情','View Case Details')) ?></a></div><?php endif; ?><?php endforeach; ?></div></div></section><?php endif; ?>
+<section class="section"><div class="container cta-banner"><h2><?= htmlspecialchars(t('想了解 ','Want to learn more about ')) ?><?= htmlspecialchars(localized($product['name'])) ?><?= htmlspecialchars(t(' 的参数资料、配置清单和应用方案？',' specifications, configuration list and application solutions?')) ?></h2><p><?= htmlspecialchars(t('欢迎联系我们，获取详细资料、项目适配建议与产品方案。','Contact us for detailed materials, project matching advice and product solutions.')) ?></p><div class="hero-actions"><a class="btn btn-primary" href="<?= url_with_lang('contact.php') ?>"><?= htmlspecialchars(t('联系商务','Contact Sales')) ?></a><a class="btn btn-secondary" href="<?= url_with_lang('products.php') ?>"><?= htmlspecialchars(t('返回产品中心','Back to Products')) ?></a></div></div></section>
 <?php endif; ?>
-
-<section class="section">
-  <div class="container cta-banner">
-    <h2>想了解 <?= htmlspecialchars($product['name']) ?> 的参数资料、配置清单和应用方案？</h2>
-    <p>欢迎联系我们，获取详细资料、项目适配建议与产品方案。</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary" href="contact.php">联系商务</a>
-      <a class="btn btn-secondary" href="products.php">返回产品中心</a>
-    </div>
-  </div>
-</section>
-<?php endif; ?>
-
-
-
-<footer class="footer">
-  <div class="container footer-bottom">
-    <div>© <?php echo date('Y'); ?> 北京飞行魔方科技有限公司</div>
-    <div>产品详情页</div>
-  </div>
-</footer>
-<script>
-(function(){
-  var btn=document.querySelector('.mobile-menu-toggle');
-  var panel=document.getElementById('mobile-menu-panel');
-  if(!btn||!panel) return;
-  btn.addEventListener('click',function(){
-    var open=panel.classList.toggle('open');
-    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
-    btn.textContent=open ? '✕' : '☰';
-  });
-})();
-</script>
-</body>
-</html>
+<footer class="footer"><div class="container footer-bottom"><div>© <?php echo date('Y'); ?> <?= htmlspecialchars(t('北京飞行魔方科技有限公司','Beijing Flicube Technology Co., Ltd.')) ?></div><div><?= htmlspecialchars(t('产品详情页','Product Detail')) ?></div></div></footer>
+<script>(function(){var btn=document.querySelector('.mobile-menu-toggle');var panel=document.getElementById('mobile-menu-panel');if(!btn||!panel) return;btn.addEventListener('click',function(){var open=panel.classList.toggle('open');btn.setAttribute('aria-expanded', open ? 'true' : 'false');btn.textContent=open ? '✕' : '☰';});})();</script>
+</body></html>
