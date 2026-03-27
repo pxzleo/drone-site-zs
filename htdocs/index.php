@@ -113,7 +113,6 @@ $featured = array_slice($products, 0, 8, true);
 <section class="section dark-section" id="fleet">
   <div class="container">
     <div class="section-header centered">
-      <span class="eyebrow eyebrow-plain">产品中心</span>
       <h2>核心产品矩阵</h2>
       <p>从轻型物流平台到重载运输系统，从消防装备到编队与载人展示平台，形成覆盖多场景的产品组合。</p>
     </div>
