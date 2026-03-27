@@ -46,19 +46,21 @@
   <div class="container grid grid-3 cards-lift">
     <?php foreach ($products as $slug => $product): ?>
       <article class="card product-card product-card-large">
-        <div class="product-image-wrap">
-          <img src="<?= htmlspecialchars((isset($product['card_image']) ? $product['card_image'] : $product['image'])) ?>" alt="<?= htmlspecialchars($product['name']) ?>">
-        </div>
-        <div class="card-body">
-          <div class="product-meta">
-            <span><?= htmlspecialchars($product['category']) ?></span>
-            <span><?= htmlspecialchars($product['payload']) ?></span>
-            <span><?= htmlspecialchars($product['endurance']) ?></span>
+        <a href="product.php?slug=<?= urlencode($slug) ?>" style="display:block;color:inherit;text-decoration:none;">
+          <div class="product-image-wrap">
+            <img src="<?= htmlspecialchars((isset($product['card_image']) ? $product['card_image'] : $product['image'])) ?>" alt="<?= htmlspecialchars($product['name']) ?>">
           </div>
-          <h3><?= htmlspecialchars($product['name']) ?></h3>
-          <p><?= htmlspecialchars($product['summary']) ?></p>
-          <a class="btn btn-secondary" href="product.php?slug=<?= urlencode($slug) ?>">查看详情</a>
-        </div>
+          <div class="card-body">
+            <div class="product-meta">
+              <span><?= htmlspecialchars($product['category']) ?></span>
+              <span><?= htmlspecialchars($product['payload']) ?></span>
+              <span><?= htmlspecialchars($product['endurance']) ?></span>
+            </div>
+            <h3><?= htmlspecialchars($product['name']) ?></h3>
+            <p><?= htmlspecialchars($product['summary']) ?></p>
+            <span class="btn btn-secondary">查看详情</span>
+          </div>
+        </a>
       </article>
     <?php endforeach; ?>
   </div>
