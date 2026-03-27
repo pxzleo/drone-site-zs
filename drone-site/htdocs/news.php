@@ -35,7 +35,6 @@
   <div class="container">
     <div class="breadcrumb"><a href="index.php">首页</a> / 新闻资讯</div>
     <div class="section-header">
-      <span class="eyebrow">新闻资讯</span>
       <h1>产品动态、方案方向与资料整理进展</h1>
       <p>当前新闻页已由模板内容改为结合现有素材整理的企业动态示意，可继续替换为真实新闻稿、媒体报道和展会信息。</p>
     </div>

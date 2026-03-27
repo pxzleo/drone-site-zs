@@ -70,7 +70,6 @@ $relatedCases = isset($productToCases[$slug]) ? $productToCases[$slug] : array()
       <div class="product-layout">
         <div class="photo"><img src="<?= htmlspecialchars($product['image']) ?>" alt="<?= htmlspecialchars($product['name']) ?>"></div>
         <div>
-          <span class="eyebrow"><?= htmlspecialchars($product['category']) ?></span>
           <h1 class="detail-title"><?= htmlspecialchars($product['name']) ?></h1>
           <p style="font-size:18px;color:#d5e4f8"><?= htmlspecialchars($product['hero']) ?></p>
           <div class="product-meta" style="margin:22px 0 6px">
